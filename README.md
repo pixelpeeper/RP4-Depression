@@ -1,7 +1,7 @@
 Rapid Prototype 4 - A Serious Game
 # *Depression*
 
-Developers:
+Team 9:
 * Anna Chen - Engineer
 * Avery Byers - Tech Artist
 * Brittany Walker - Producer
