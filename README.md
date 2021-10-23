@@ -9,6 +9,12 @@ Developers:
 * Zuan Zheng - Artist
 
 Subject: Depression
+- How to better understand and help those with depression
+
 Aesthetic: Minimalism
+- Low poly flat shading
+
 Tech: Mobile Phone
+- Swipe gestures and tapping for interaction
+
 Engine: Unity 2020.3.21f1
