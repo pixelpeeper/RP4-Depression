@@ -512,7 +512,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf47cba350d6943d296cccf9acd44a21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -765,5 +765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadingSpeed: 0.01
-  targetColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 0}
+  ColorList:
+  - {r: 0.6509434, g: 0.35924706, b: 0.35924706, a: 0}
+  - {r: 0.5010343, g: 0.20825918, b: 0.6792453, a: 0}
+  - {r: 0.48900855, g: 0.5629001, b: 0.9339623, a: 0}
   interpolationFramesCount: 45
