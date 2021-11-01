@@ -18,6 +18,8 @@ public class DragRotation : MonoBehaviour
 
     //Continuous Rotation variables
     private float maxDragDistance = 0.2f;
+    private float dragUnit = 0.1f;
+    private float rotationAnglePerDragUnit = 10f;
 
     //DiscreteRotationVariables
     private float minDragDistanceToTrigger = 0.3f;
@@ -93,22 +95,33 @@ public class DragRotation : MonoBehaviour
             Vector2 currentMouseViewportPosition = Camera.main.ScreenToViewportPoint(
             new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
 
-            Vector2 dragDirection = (currentMouseViewportPosition - originalMouseViewportPosition).normalized;
-            float dragDistanceProportion = Mathf.Abs(currentMouseViewportPosition.x - originalMouseViewportPosition.x) / this.maxDragDistance;
-            float currentRotationSpeed = Mathf.Lerp(0, this.maxRotationSpeed, dragDistanceProportion);
+            Vector2 dragDirection = (currentMouseViewportPosition - originalMouseViewportPosition);
 
-            if (dragDirection.x > 0)
+            //float dragDistanceProportion = Mathf.Abs(currentMouseViewportPosition.x - originalMouseViewportPosition.x) / this.maxDragDistance;
+            //float currentRotationSpeed = Mathf.Lerp(0, this.maxRotationSpeed, dragDistanceProportion);
+
+            float yAxisRotationUnits = (-dragDirection.x / this.dragUnit) * this.rotationAnglePerDragUnit;
+            float xAxisRotationUnits = (dragDirection.y / this.dragUnit) * this.rotationAnglePerDragUnit;
+
+            /*if (dragDirection.x > 0)
             {
-                currentRotationSpeed *= -1f;
+                yAxisRotationUnits *= -1f;
             }
+            */
+            Vector3 originalEulers = this.rotatingCamera.transform.rotation.eulerAngles;
 
-            this.rotatingCamera.transform.Rotate(0f, (currentRotationSpeed * Time.deltaTime), 0f);
+            this.rotatingCamera.transform.rotation = Quaternion.Euler(originalEulers.x + xAxisRotationUnits, originalEulers.y + yAxisRotationUnits, 0f);
+
+            //this.rotatingCamera.transform.Rotate(xAxisRotationUnits, 0f, 0f);
+            //this.rotatingCamera.transform.Rotate(0f, yAxisRotationUnits, 0f);
+
+            originalMouseViewportPosition = currentMouseViewportPosition;
 
             yield return null;
         }
 
         //For finger input on device
-        while (Input.touchCount > 0)
+        /*while (Input.touchCount > 0)
         {
             Touch updatedTouch = Input.GetTouch(0);
             Vector2 viewportSpaceStartingPosition = Camera.main.ScreenToViewportPoint(updatedTouch.rawPosition);
@@ -126,7 +139,7 @@ public class DragRotation : MonoBehaviour
             this.rotatingCamera.transform.Rotate(0f, (currentRotationSpeed * Time.deltaTime), 0f);
 
             yield return null;
-        }
+        }*/
 
         this.rotationCoroutine = null;
     }
