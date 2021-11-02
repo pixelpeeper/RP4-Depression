@@ -9,7 +9,7 @@ public class ClickableObject : MonoBehaviour
     public Material interactMaterial1;
     public Material interactMaterial2;
 
-    public void Interact()
+    public virtual void Interact()
     {
         if (currentRenderer.material.name.Contains("Green"))
         {

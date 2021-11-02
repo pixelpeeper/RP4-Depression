@@ -97,49 +97,17 @@ public class DragRotation : MonoBehaviour
 
             Vector2 dragDirection = (currentMouseViewportPosition - originalMouseViewportPosition);
 
-            //float dragDistanceProportion = Mathf.Abs(currentMouseViewportPosition.x - originalMouseViewportPosition.x) / this.maxDragDistance;
-            //float currentRotationSpeed = Mathf.Lerp(0, this.maxRotationSpeed, dragDistanceProportion);
-
             float yAxisRotationUnits = (-dragDirection.x / this.dragUnit) * this.rotationAnglePerDragUnit;
             float xAxisRotationUnits = (dragDirection.y / this.dragUnit) * this.rotationAnglePerDragUnit;
 
-            /*if (dragDirection.x > 0)
-            {
-                yAxisRotationUnits *= -1f;
-            }
-            */
             Vector3 originalEulers = this.rotatingCamera.transform.rotation.eulerAngles;
 
             this.rotatingCamera.transform.rotation = Quaternion.Euler(originalEulers.x + xAxisRotationUnits, originalEulers.y + yAxisRotationUnits, 0f);
-
-            //this.rotatingCamera.transform.Rotate(xAxisRotationUnits, 0f, 0f);
-            //this.rotatingCamera.transform.Rotate(0f, yAxisRotationUnits, 0f);
 
             originalMouseViewportPosition = currentMouseViewportPosition;
 
             yield return null;
         }
-
-        //For finger input on device
-        /*while (Input.touchCount > 0)
-        {
-            Touch updatedTouch = Input.GetTouch(0);
-            Vector2 viewportSpaceStartingPosition = Camera.main.ScreenToViewportPoint(updatedTouch.rawPosition);
-            Vector2 viewportSpaceCurrentPosition = Camera.main.ScreenToViewportPoint(updatedTouch.position);
-
-            Vector2 dragDirection = (viewportSpaceCurrentPosition - viewportSpaceStartingPosition).normalized;
-            float dragDistanceProportion = Mathf.Abs(viewportSpaceCurrentPosition.x - viewportSpaceStartingPosition.x) / this.maxDragDistance;
-            float currentRotationSpeed = Mathf.Lerp(0, this.maxRotationSpeed, dragDistanceProportion);
-
-            if (dragDirection.x > 0)
-            {
-                currentRotationSpeed *= -1f;
-            }
-
-            this.rotatingCamera.transform.Rotate(0f, (currentRotationSpeed * Time.deltaTime), 0f);
-
-            yield return null;
-        }*/
 
         this.rotationCoroutine = null;
     }
