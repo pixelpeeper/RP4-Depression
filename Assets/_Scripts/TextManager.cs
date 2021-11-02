@@ -9,28 +9,33 @@ public class TextManager : MonoBehaviour
     //2 line b:320 n:190
     //3 line b:380 n:260
     // Start is called before the first frame update
-    public RectTransform backgroundTrans;
+    public GameObject narrativeBlock;
     public RectTransform narrTrans;
     public Text narrative;
 
     [SerializeField]
-    float delayTime = 0.1f;
+    float delayTime = 0.08f;
 
-    int[] backgroundHeight = { 260, 320, 380 };
-    int[] narrativeHeight = { 120, 190, 260 };
+    int[] backgroundHeight = { 200, 250, 320, 380 };
+    int[] narrativeHeight = { 120, 190, 260, 315 };
     int perLength = 67;
+    public bool isButtonClick = false;
+    string currentString;
+    IEnumerator co;
 
-        private void Start()
+    private void Start()
     {
-        ChangeText("This is a simple test. I hope it works well for the first time cause I'm pretty tired and I want to go to sleep.");
     }
 
     public void ChangeText(string s)
     {
+        currentString = s;
+        isButtonClick = false;
         narrative.text = "";
-
+        narrativeBlock.SetActive(true);
         SetHeight(s);
-        StartCoroutine(ShowText(s));
+        co = ShowText(s);
+        StartCoroutine(co);
     }
 
     void SetHeight(string s)
@@ -38,21 +43,33 @@ public class TextManager : MonoBehaviour
         int lineCount = s.Length / perLength;
         if (s.Length % perLength != 0) lineCount++;
 
-        backgroundTrans.sizeDelta = new Vector2(backgroundTrans.rect.width, backgroundHeight[lineCount - 1]);
+        narrativeBlock.GetComponent<RectTransform>().sizeDelta = new Vector2(narrativeBlock.GetComponent<RectTransform>().rect.width, backgroundHeight[lineCount - 1]);
         narrTrans.sizeDelta = new Vector2(narrTrans.rect.width, narrativeHeight[lineCount - 1]);
     }
 
     IEnumerator ShowText(string s)
     {
-        for(int i = 0; i < s.Length; i++)
+        for(int i = 0; i <= s.Length; i++)
         {
             narrative.text = s.Substring(0, i);
             yield return new WaitForSeconds(delayTime);
         }
     }
 
-    public void ClearText()
+    
+    public void ButtonClicked()
     {
-        narrative.text = "";
+        if(narrative.text != currentString)
+        {
+            StopCoroutine(co);
+            narrative.text = currentString;
+        }
+        else
+        {
+            isButtonClick = true;
+            narrative.text = "";
+            narrativeBlock.SetActive(false);
+
+        }
     }
 }
