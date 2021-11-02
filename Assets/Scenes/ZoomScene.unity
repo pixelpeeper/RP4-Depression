@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.0627451}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.015686275}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1303,10 +1303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonClick: 0
-  dialoguePrefab: {fileID: 0}
-  roll: {fileID: 0}
+  dialoguePrefab: {fileID: 2198298644152278848, guid: 498b4cc35fb086a4eb3173e064148a0e, type: 3}
+  mask: {fileID: 1315249306}
+  roll: {fileID: 678016179}
   dialogueCount: 30
-  height: 80
+  height: 85
 --- !u!1 &2072397753
 GameObject:
   m_ObjectHideFlags: 0
