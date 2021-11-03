@@ -1,0 +1,189 @@
+00:23:10  4393MB         | [color_manager] using color manager of type "color_manager_ocio"
+00:23:10  4393MB         | [color_manager] rendering color space is "ACEScg"
+00:23:10  4393MB         |  
+00:23:10  4393MB         | rendering image at 1717 x 1061, 3 AA samples
+00:23:10  4393MB         |   AA samples max    <disabled>
+00:23:10  4393MB         |   AA sample clamp   <disabled>
+00:23:10  4393MB         |   diffuse           <disabled by depth>
+00:23:10  4393MB         |   specular          samples  2 / depth  1
+00:23:10  4393MB         |   transmission      <disabled by depth>
+00:23:10  4393MB         |   volume indirect   <disabled by depth>
+00:23:10  4393MB         |   total                          depth 10
+00:23:10  4393MB         |   bssrdf            samples  2
+00:23:10  4393MB         |   transparency      depth 10
+00:23:10  4393MB         | node initialization done in 0:00.00 (multithreaded)
+00:23:10  4393MB         | updating 75 nodes ...
+00:23:10  4393MB         | node update done in 0:00.00 (multithreaded)
+00:23:10  4393MB         | [aov] parsing 2 output statements ...
+00:23:10  4393MB         | [aov] registered driver: "arv_display" (driver_arv)
+00:23:10  4393MB         | [aov]  * "RGBA" of type RGBA filtered by "defaultArnoldFilter/gaussian_filter" (gaussian_filter)
+00:23:10  4393MB         | [aov]  * "object" of type NODE filtered by "_renderViewDefault/closest_filter" (closest_filter)
+00:23:10  4393MB         | [aov] done preparing 6 AOVs for 4 outputs to 1 driver (0 deep AOVs)
+00:23:10  4359MB         | starting 31 bucket workers of size 64x64 ...
+00:23:10  4359MB         |    0% done - 559 rays/pixel
+00:23:10  4380MB         |    5% done - 2 rays/pixel
+00:23:10  4387MB         |   10% done - 34 rays/pixel
+00:23:10  4394MB         |   15% done - 32 rays/pixel
+00:23:10  4385MB         |   20% done - 9 rays/pixel
+00:23:11  4406MB         |   25% done - 28 rays/pixel
+00:23:11  4413MB         |   30% done - 38 rays/pixel
+00:23:11  4413MB         |   35% done - 24 rays/pixel
+00:23:11  4386MB         |   40% done - 8 rays/pixel
+00:23:11  4413MB         |   45% done - 29 rays/pixel
+00:23:12  4385MB         |   50% done - 23 rays/pixel
+00:23:12  4413MB         |   55% done - 14 rays/pixel
+00:23:12  4385MB         |   60% done - 25 rays/pixel
+00:23:12  4385MB         |   65% done - 22 rays/pixel
+00:23:12  4385MB         |   70% done - 24 rays/pixel
+00:23:12  4386MB         |   75% done - 20 rays/pixel
+00:23:12  4386MB         |   80% done - 15 rays/pixel
+00:23:13  4402MB         |   85% done - 28 rays/pixel
+00:23:13  4414MB         |   90% done - 24 rays/pixel
+00:23:13  4414MB         |   95% done - 12 rays/pixel
+00:23:13  4386MB         |  100% done - 12 rays/pixel
+00:23:13  4388MB         | render done in 0:03.179
+00:23:13  4394MB         | render done
+00:23:13  4394MB         |  
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | scene creation time          5:41.65    machine utilization (0.00%) 
+00:23:13  4394MB         |  unaccounted                 5:41.65 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | frame time                  17:31.27    machine utilization (0.30%) 
+00:23:13  4394MB         |  driver init/close           0:00.08 
+00:23:13  4394MB         |  rendering                   0:03.17 
+00:23:13  4394MB         |   output driver              0:00.08 
+00:23:13  4394MB         |   pixel rendering            0:03.09 
+00:23:13  4394MB         |  unaccounted                17:28.01 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | top session self-times by category 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | top session self-times by node 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | peak CPU memory used     4506.90MB 
+00:23:13  4394MB         |  at startup               921.49MB 
+00:23:13  4394MB         |  AOV samples               33.75MB 
+00:23:13  4394MB         |  output buffers             6.30MB 
+00:23:13  4394MB         |  node overhead              0.04MB 
+00:23:13  4394MB         |  instance overhead          0.00MB 
+00:23:13  4394MB         |  message passing            0.06MB 
+00:23:13  4394MB         |  memory pools              57.55MB 
+00:23:13  4394MB         |  geometry                   0.24MB 
+00:23:13  4394MB         |   polymesh                  0.24MB 
+00:23:13  4394MB         |   subdivs                   0.00MB 
+00:23:13  4394MB         |  accel structs              0.20MB 
+00:23:13  4394MB         |  skydome importance map   888.67MB 
+00:23:13  4394MB         |  strings                   24.25MB 
+00:23:13  4394MB         |  texture cache             77.74MB 
+00:23:13  4394MB         |  unaccounted             2496.60MB (note: interactive session)
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | peak GPU memory consumed 3583.93MB 
+00:23:13  4394MB         |  output buffers           111.19MB 
+00:23:13  4394MB         |  geometry                   0.38MB 
+00:23:13  4394MB         |   polymesh                  0.38MB 
+00:23:13  4394MB         |   subdivs                   0.00MB 
+00:23:13  4394MB         |  texture cache           -169.06MB 
+00:23:13  4394MB         |  unaccounted             3641.42MB 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | ray counts                       ( /pixel, /sample) (% total) (avg. hits) (max hits)
+00:23:13  4394MB         |  camera                 16859239 (   9.25,    1.00) ( 41.38%) (     0.93) (       2)
+00:23:13  4394MB         |  shadow                 23755731 (  13.04,    1.41) ( 58.31%) (     0.00) (       1)
+00:23:13  4394MB         |  specular_reflect         128616 (   0.07,    0.01) (  0.32%) (     1.00) (       2)
+00:23:13  4394MB         |  total                  40743586 (  22.37,    2.42) (100.00%) (     0.39) (       2)
+00:23:13  4394MB         | by ray depth:              0     1
+00:23:13  4394MB         |  total                   99.3%  0.7% 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | shader calls                     (  /pixel,  /sample) (% total)
+00:23:13  4394MB         |  primary                15760386 (    8.65,     0.93) ( 92.77%)
+00:23:13  4394MB         |  background              1227469 (    0.67,     0.07) (  7.23%)
+00:23:13  4394MB         |  total                  16987855 (    9.33,     1.01) (100.00%)
+00:23:13  4394MB         | by ray depth:              0     1
+00:23:13  4394MB         |  total                   99.2%  0.8% 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | geometry                         (% hit ) (instances) (  init mem,  final mem)
+00:23:13  4394MB         |  lists                         1 (  0.0%) (        0) (      0.00,       0.00)
+00:23:13  4394MB         |  polymeshes                   51 (100.0%) (        3) (      0.25,       0.24)
+00:23:13  4394MB         |  subdivs                       1 (100.0%) (        0) (      0.00,       0.00)
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | geometric elements               (      min) (       avg.) (      max)
+00:23:13  4394MB         |  objects (top level)           3 (        3) (        3.0) (        3)
+00:23:13  4394MB         |  polygons                   6781 (        1) (      133.0) (     2080)
+00:23:13  4394MB         |  subdiv patches                1 (        1) (        1.0) (        1)
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | triangle tessellation            (      min) (       avg.) (      max) (/ element) (% total)
+00:23:13  4394MB         |  polymeshes                13352 (        2) (      261.8) (     4160) (     1.97) ( 99.94%)
+00:23:13  4394MB         |  subdivs                       8 (        8) (        8.0) (        8) (     8.00) (  0.06%)
+00:23:13  4394MB         |   iterations 1                 8 (        8) (        8.0) (        8) (     8.00) (  0.06%)
+00:23:13  4394MB         |  unique triangles          13360 
+00:23:13  4394MB         |  visible triangles         14480 
+00:23:13  4394MB         |  CPU memory use             0.24MB 
+00:23:13  4394MB         |   vertices                  0.08MB 
+00:23:13  4394MB         |   vertex indices            0.03MB 
+00:23:13  4394MB         |   polygon base offsets      0.00MB 
+00:23:13  4394MB         |   polygon IDs               0.00MB 
+00:23:13  4394MB         |   triangulation             0.00MB 
+00:23:13  4394MB         |   packed normals            0.02MB 
+00:23:13  4394MB         |   normal indices            0.03MB 
+00:23:13  4394MB         |   uv coords                 0.02MB 
+00:23:13  4394MB         |   uv coords idxs            0.03MB 
+00:23:13  4394MB         |   uniform indices           0.01MB 
+00:23:13  4394MB         |   userdata                  0.00MB 
+00:23:13  4394MB         |  GPU memory use             0.38MB 
+00:23:13  4394MB         |   vertices                  0.08MB 
+00:23:13  4394MB         |   vertex indices            0.19MB 
+00:23:13  4394MB         |   polygon base offsets      0.00MB 
+00:23:13  4394MB         |   polygon IDs               0.00MB 
+00:23:13  4394MB         |   triangulation             0.00MB 
+00:23:13  4394MB         |   normals                   0.02MB 
+00:23:13  4394MB         |   normal indices            0.03MB 
+00:23:13  4394MB         |   shader indices            0.00MB 
+00:23:13  4394MB         |   uv coords                 0.02MB 
+00:23:13  4394MB         |   uv coords idxs            0.03MB 
+00:23:13  4394MB         |   uniform indices           0.01MB 
+00:23:13  4394MB         |   other                     0.01MB 
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | OpenImageIO Texture statistics
+00:23:13  4394MB         |   Options:  gray_to_rgb=1 flip_t=0 max_tile_channels=6 
+00:23:13  4394MB         |   Queries/batches : 
+00:23:13  4394MB         |     texture     :  113027329 queries in 113027329 batches
+00:23:13  4394MB         |     texture 3d  :  0 queries in 0 batches
+00:23:13  4394MB         |     shadow      :  0 queries in 0 batches
+00:23:13  4394MB         |     environment :  0 queries in 0 batches
+00:23:13  4394MB         |     gettextureinfo :  0 queries
+00:23:13  4394MB         |   Interpolations :
+00:23:13  4394MB         |     closest  : 1
+00:23:13  4394MB         |     bilinear : 163483488
+00:23:13  4394MB         |     bicubic  : 0
+00:23:13  4394MB         |   Average anisotropic probes : 1
+00:23:13  4394MB         |   Max anisotropy in the wild : 1
+00:23:13  4394MB         | 
+00:23:13  4394MB         | OpenImageIO ImageCache statistics (00000291AF05C040) ver 2.3.2dev
+00:23:13  4394MB         |   Options:  max_memory_MB=4096.0 max_open_files=1536 autotile=0
+00:23:13  4394MB         |             autoscanline=1 automip=0 forcefloat=0 accept_untiled=1
+00:23:13  4394MB         |             accept_unmipped=1 deduplicate=1 unassociatedalpha=0
+00:23:13  4394MB         |             failure_retries=0 
+00:23:13  4394MB         |   Images : 2 unique
+00:23:13  4394MB         |     ImageInputs : 2 created, 0 current, 1 peak
+00:23:13  4394MB         |     Total pixel data size of all images referenced : 224.0 MB
+00:23:13  4394MB         |     Total actual file size of all images referenced : 47.5 MB
+00:23:13  4394MB         |     Pixel data read : 122.2 MB
+00:23:13  4394MB         |     File I/O time : 3.6s (0.1s average per thread, for 65 threads)
+00:23:13  4394MB         |     File open time only : 0.0s
+00:23:13  4394MB         |   Tiles: 3392 created, 1658 current, 2608 peak
+00:23:13  4394MB         |     total tile requests : 173821364
+00:23:13  4394MB         |     micro-cache misses : 1252630 (0.720642%)
+00:23:13  4394MB         |     main cache misses : 3392 (0.00195143%)
+00:23:13  4394MB         |     redundant reads: 0 tiles, 0 B
+00:23:13  4394MB         |     Peak cache memory : 77.7 MB
+00:23:13  4394MB         |   Image file statistics:
+00:23:13  4394MB         |         opens   tiles    MB read   --redundant--   I/O time  res              File
+00:23:13  4394MB         |   BROKEN                                                                      D:/Documents/maya/projects/Rapid4_Minimalist_models/sourceimages/the_sky_is_on_fire_4k.hdr
+00:23:13  4394MB         |   BROKEN                                                                      D:/Documents/maya/projects/Rapid4_Minimalist_models/sourceimages/the_sky_is_on_fire_4k.tx
+00:23:13  4394MB         | 
+00:23:13  4394MB         |   Tot:     2     2608      122.2   (    0    0.0)      3.6s
+00:23:13  4394MB         |   2 were constant-valued in all pixels
+00:23:13  4394MB         |   Broken or invalid files: 0
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
+00:23:13  4394MB         | performance warnings:
+00:23:13  4394MB WARNING |  Rendering CPU utilization was only 0%. Your render may be bound by a single threaded process or I/O.
+00:23:13  4394MB WARNING |  Scene creation was a significant amount of total time (25%). Consider optimizing this process first.
+00:23:13  4394MB         | -----------------------------------------------------------------------------------
