@@ -17,6 +17,9 @@ public class NPCdialogueManager : MonoBehaviour
     int dialogueCount = 30;
     [SerializeField]
     int height = 85;
+
+    [SerializeField]
+    int interpolationFramesCount = 500;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +58,7 @@ public class NPCdialogueManager : MonoBehaviour
 
     IEnumerator MoveDialogue()
     {
-        int interpolationFramesCount = 500; // Number of frames to completely interpolate between the 2 positions
+        interpolationFramesCount = 500; // Number of frames to completely interpolate between the 2 positions
         int elapsedFrames = 0;
 
         float targetY = roll.localPosition.y + height;
@@ -66,8 +69,8 @@ public class NPCdialogueManager : MonoBehaviour
 
             roll.localPosition = Vector3.Lerp(roll.localPosition, tartgetVector, interpolationRatio);
 
-            if (elapsedFrames >= 1000) {
-                elapsedFrames = 1000;
+            if (elapsedFrames >= interpolationFramesCount) {
+                elapsedFrames = interpolationFramesCount;
                 roll.localPosition = tartgetVector;
             } 
             else
