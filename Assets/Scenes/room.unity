@@ -1970,7 +1970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8137483532250806064, guid: fa68ccdaed6eb4a429a86ea7e622b63a, type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8019848773083012311, guid: fa68ccdaed6eb4a429a86ea7e622b63a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1982,7 +1982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7627130352855474075, guid: fa68ccdaed6eb4a429a86ea7e622b63a, type: 3}
       propertyPath: m_ScaleInLightmap
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -7590381028972563962, guid: fa68ccdaed6eb4a429a86ea7e622b63a, type: 3}
       propertyPath: m_CastShadows
