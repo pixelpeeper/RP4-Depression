@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
 
     TextManager textManager;
     NPCdialogueManager npcDialogueManager;
+    ButtonsManager buttonsManager;
     // Start is called before the first frame update
     void Start()
     {
         npcDialogueManager = FindObjectOfType<NPCdialogueManager>();
         textManager = FindObjectOfType<TextManager>();
+        buttonsManager = FindObjectOfType<ButtonsManager>();
         //StartCoroutine(NarrativeManager());
     }
 
@@ -35,6 +37,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             StartCoroutine(NPCdialogue(d1));
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            buttonsManager.SetButtons("Go to sleep.", "Go to rapid");
         }
 
     }

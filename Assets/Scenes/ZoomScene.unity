@@ -573,7 +573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &520900320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -618,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 44.53759}
-  m_SizeDelta: {x: 130, y: 83.0924}
+  m_AnchoredPosition: {x: 0, y: 29}
+  m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630738717
 MonoBehaviour:
@@ -664,7 +664,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 630738718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1666972990}
+        m_TargetAssemblyTypeName: ButtonsManager, Assembly-CSharp
+        m_MethodName: firstOptionClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &630738718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &750361023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1146,7 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
+  m_ShowMaskGraphic: 0
 --- !u!114 &1315249309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,6 +1486,7 @@ GameObject:
   - component: {fileID: 1666972984}
   - component: {fileID: 1666972988}
   - component: {fileID: 1666972989}
+  - component: {fileID: 1666972990}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1601,6 +1614,21 @@ MonoBehaviour:
   dialogueCount: 30
   height: 85
   interpolationFramesCount: 500
+--- !u!114 &1666972990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666972983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96dae03bf10e1a4fab9ab8eb94376d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 750361022}
+  firstOption: {fileID: 520900319}
+  secondOption: {fileID: 2127595663}
 --- !u!1 &2072397753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1761,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -45}
-  m_SizeDelta: {x: 130, y: 83.0924}
+  m_SizeDelta: {x: 130, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103766597
 MonoBehaviour:
@@ -1778,7 +1806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2103766598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1666972990}
+        m_TargetAssemblyTypeName: ButtonsManager, Assembly-CSharp
+        m_MethodName: secondOptionClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2103766598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,7 +1927,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &2127595664
 CanvasRenderer:
   m_ObjectHideFlags: 0
