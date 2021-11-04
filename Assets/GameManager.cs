@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour
     TextManager textManager;
     NPCdialogueManager npcDialogueManager;
     ButtonsManager buttonsManager;
+    BlurBackground blurBackground;
     // Start is called before the first frame update
     void Start()
     {
         npcDialogueManager = FindObjectOfType<NPCdialogueManager>();
         textManager = FindObjectOfType<TextManager>();
         buttonsManager = FindObjectOfType<ButtonsManager>();
+        blurBackground = FindObjectOfType<BlurBackground>();
         //StartCoroutine(NarrativeManager());
     }
 
@@ -57,6 +59,9 @@ public class GameManager : MonoBehaviour
             while (!npcDialogueManager.isButtonClick) yield return null;
 
         }
+        npcDialogueManager.ResetDialogue();
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();
     }
 
     IEnumerator NarrativeManager(string[] narrative)
@@ -70,6 +75,8 @@ public class GameManager : MonoBehaviour
             while (!textManager.isButtonClick) yield return null;
             
         }
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();
 
 
     }

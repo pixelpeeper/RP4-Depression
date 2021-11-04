@@ -24,6 +24,7 @@ public class TextManager : MonoBehaviour
     public bool isButtonClick = false;
     string currentString;
     IEnumerator co;
+    BlurBackground blurBackground;
 
     public void Awake()
     {
@@ -32,10 +33,14 @@ public class TextManager : MonoBehaviour
 
     private void Start()
     {
+        blurBackground = FindObjectOfType<BlurBackground>();
     }
 
     public void ChangeText(string s)
     {
+        if (!blurBackground.isBlur)
+            blurBackground.StartBlur();
+
         currentString = s;
         isButtonClick = false;
         narrative.text = "";
@@ -66,7 +71,11 @@ public class TextManager : MonoBehaviour
     
     public void ButtonClicked()
     {
-        if(narrative.text != currentString)
+        /*
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();*/
+
+        if (narrative.text != currentString)
         {
             StopCoroutine(co);
             narrative.text = currentString;

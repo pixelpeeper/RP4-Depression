@@ -8,10 +8,12 @@ public class ButtonsManager : MonoBehaviour
     public GameObject Button;
     public Text firstOption;
     public Text secondOption;
+
+    BlurBackground blurBackground;
     // Start is called before the first frame update
     void Start()
     {
-        
+        blurBackground = FindObjectOfType<BlurBackground>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,9 @@ public class ButtonsManager : MonoBehaviour
 
     public void SetButtons(string s1, string s2)
     {
+        if (!blurBackground.isBlur)
+            blurBackground.StartBlur();
+
         Button.SetActive(true);
         firstOption.text = s1;
         secondOption.text = s2;
@@ -33,7 +38,9 @@ public class ButtonsManager : MonoBehaviour
         firstOption.text = "";
         secondOption.text = "";
         Button.SetActive(false);
-        Debug.Log("first");
+
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();
     }
 
     public void secondOptionClicked()
@@ -41,6 +48,9 @@ public class ButtonsManager : MonoBehaviour
         firstOption.text = "";
         secondOption.text = "";
         Button.SetActive(false);
-        Debug.Log("second");
+
+        
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();
     }
 }
