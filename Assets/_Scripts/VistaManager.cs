@@ -29,9 +29,9 @@ public class VistaManager : MonoBehaviour
         instance = this;
     }
 
-    public void TriggerVista(int vistaIndex)
+    public void TriggerVista(int vistaIndex, DialogueScript startingScript)
     {
-        StartCoroutine(this.SetupVista(this.gameVistas[vistaIndex]));
+        StartCoroutine(this.SetupVista(this.gameVistas[vistaIndex], startingScript));
     }
 
     private bool HasCameraReachedVista(VistaSettings targetVista)
@@ -41,10 +41,10 @@ public class VistaManager : MonoBehaviour
         float yRotationDistance = Mathf.Abs(this.playerCamera.transform.rotation.eulerAngles.y - targetVista.cameraEulerRotation.y) % 360;
         float zRotationDistance = Mathf.Abs(this.playerCamera.transform.rotation.eulerAngles.z - targetVista.cameraEulerRotation.z) % 360;
 
-        return (translationDistance <= 0.1f && xRotationDistance <= 0.1f && yRotationDistance <= 0.1f && zRotationDistance <= 0.1f);
+        return (translationDistance <= 0.01f && xRotationDistance <= 0.01f && yRotationDistance <= 0.01f && zRotationDistance <= 0.01f);
     }
 
-    private IEnumerator SetupVista(VistaSettings targetVista)
+    private IEnumerator SetupVista(VistaSettings targetVista, DialogueScript startingScript)
     {
         while (!HasCameraReachedVista(targetVista))
         {
@@ -52,6 +52,12 @@ public class VistaManager : MonoBehaviour
             this.playerCamera.transform.rotation = Quaternion.RotateTowards(this.playerCamera.transform.rotation, Quaternion.Euler(targetVista.cameraEulerRotation), this.rotationSpeed * Time.fixedDeltaTime);
             yield return null;
         }
+
+        this.cameraHolder.transform.position = targetVista.cameraPosition;
+        this.playerCamera.transform.rotation = Quaternion.Euler(targetVista.cameraEulerRotation);
+
+        ScenarioManager.instance.StartNewDialogueScript(startingScript);
+
     }
 }
 

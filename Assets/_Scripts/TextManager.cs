@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
+    public static TextManager instance;
+    
     //1 line b:260 n:120
     //2 line b:320 n:190
     //3 line b:380 n:260
@@ -22,6 +24,11 @@ public class TextManager : MonoBehaviour
     public bool isButtonClick = false;
     string currentString;
     IEnumerator co;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {

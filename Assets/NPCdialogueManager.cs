@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class NPCdialogueManager : MonoBehaviour
 {
+    public static NPCdialogueManager instance;
+    
     public bool isButtonClick = false;
     public GameObject dialoguePrefab;
     public GameObject mask;
@@ -20,6 +22,12 @@ public class NPCdialogueManager : MonoBehaviour
 
     [SerializeField]
     int interpolationFramesCount = 500;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
