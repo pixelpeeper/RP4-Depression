@@ -44,7 +44,7 @@ public class NPCdialogueManager : MonoBehaviour
             dialogueBlockList.Add(dialogueBlock);
         }
 
-        npc.SetActive(false);
+        this.npc.SetActive(false);
     }
 
     // Update is called once per frame

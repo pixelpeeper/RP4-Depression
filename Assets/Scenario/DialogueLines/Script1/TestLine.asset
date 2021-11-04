@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: This is a test narrator line
+  dialogueText: Behold, I am the omniscient narrator

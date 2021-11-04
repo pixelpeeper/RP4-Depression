@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine 2
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: BLAH BLAH MORE NPC
+  dialogueText: Wait, who said that?

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine 1
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: This is a test NPC line
+  dialogueText: And I'm just some invisible NPC

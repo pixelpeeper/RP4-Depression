@@ -11,16 +11,4 @@ public class DialogueChoice : ScriptableObject
     public NPCImpact npcImpact;
     public float npcStatusImpactValue;
     public DialogueScript correspondingScript;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

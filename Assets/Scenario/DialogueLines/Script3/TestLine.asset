@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TestLine
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: That was the correct choice!
+  dialogueText: Oof...why did you pick that option?

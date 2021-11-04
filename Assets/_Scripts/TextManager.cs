@@ -15,8 +15,7 @@ public class TextManager : MonoBehaviour
     public RectTransform narrTrans;
     public Text narrative;
 
-    [SerializeField]
-    float delayTime = 0.08f;
+    private float delayTime = 0.01f;
 
     int[] backgroundHeight = { 200, 250, 320, 380 };
     int[] narrativeHeight = { 120, 190, 260, 315 };
@@ -87,5 +86,11 @@ public class TextManager : MonoBehaviour
             narrativeBlock.SetActive(false);
 
         }
+    }
+
+    public void HideBlock()
+    {
+        narrative.text = "";
+        narrativeBlock.SetActive(false);
     }
 }

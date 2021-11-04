@@ -46,6 +46,8 @@ public class VistaManager : MonoBehaviour
 
     private IEnumerator SetupVista(VistaSettings targetVista, DialogueScript startingScript)
     {
+        DragRotation.instance.currentlyActive = false;
+        
         while (!HasCameraReachedVista(targetVista))
         {
             this.cameraHolder.transform.position = Vector3.Lerp(this.cameraHolder.transform.position, targetVista.cameraPosition, this.moveSpeed * Time.fixedDeltaTime);

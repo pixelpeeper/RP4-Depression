@@ -6,7 +6,19 @@ public class ScenarioManager : MonoBehaviour
 {
     public static ScenarioManager instance;
 
-    private DialogueScript currentScript;
+    [HideInInspector]
+    public DialogueScript currentScript = null;
+
+    [SerializeField]
+    private GameObject nextDialogueButton;
+
+    [SerializeField]
+    private GameObject choiceButton1;
+    [SerializeField]
+    private GameObject choiceButton2;
+
+    [SerializeField]
+    private BlurBackground blurBackground;
 
     void Awake()
     {
@@ -15,20 +27,31 @@ public class ScenarioManager : MonoBehaviour
 
     public void StartNewDialogueScript(DialogueScript newScript)
     {
+        NPCdialogueManager.instance.ResetDialogue();
+
         this.currentScript = newScript;
         this.currentScript.lineIndex = 0;
+        this.nextDialogueButton.SetActive(true);
+        this.choiceButton1.SetActive(false);
+        this.choiceButton2.SetActive(false);
         this.ProgressDialogueScript();
     }
 
     public void ProgressDialogueScript()
     {
-        Debug.LogError("Next Dialogue!");
-
         DialogueLine nextLine = this.currentScript.GetNextDialogueLine();
 
         if (nextLine == null)
         {
-            this.PromptChoice();
+            if (this.currentScript.scriptChoices.Count != 0)
+            {
+                this.PromptChoice();
+            }
+            else
+            {
+                this.EndScenario();
+            }
+            return;
         }
 
         switch (nextLine.speaker)
@@ -47,6 +70,27 @@ public class ScenarioManager : MonoBehaviour
 
     private void PromptChoice()
     {
-        Debug.LogError("PROMPT CHOICES");
+        Debug.LogError("CHOICE TIME");
+
+        this.nextDialogueButton.SetActive(false);
+
+        this.choiceButton1.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[0];
+        this.choiceButton2.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[1];
+
+        this.choiceButton1.SetActive(true);
+        this.choiceButton2.SetActive(true);
+    }
+
+    private void EndScenario()
+    {
+        this.currentScript = null;
+        this.nextDialogueButton.SetActive(false);
+        NPCdialogueManager.instance.ResetDialogue();
+
+        TextManager.instance.HideBlock();
+
+        this.blurBackground.EndBlur();
+
+        DragRotation.instance.currentlyActive = true;
     }
 }

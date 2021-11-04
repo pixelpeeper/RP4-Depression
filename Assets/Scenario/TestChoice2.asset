@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
-  m_Name: TestLine
+  m_Script: {fileID: 11500000, guid: 4a9b2122519e08041b9a7405ff9d1a4e, type: 3}
+  m_Name: TestChoice2
   m_EditorClassIdentifier: 
-  speaker: 0
-  dialogueText: That was the correct choice!
+  choiceName: NegativeChoice
+  npcImpact: 1
+  npcStatusImpactValue: 0.3
+  correspondingScript: {fileID: 11400000, guid: d532564c3051463448d7d331d43a5475, type: 2}

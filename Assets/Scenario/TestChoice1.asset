@@ -15,4 +15,4 @@ MonoBehaviour:
   choiceName: Positive Choice
   npcImpact: 0
   npcStatusImpactValue: 0.3
-  correspondingScript: {fileID: 0}
+  correspondingScript: {fileID: 11400000, guid: 0b24bbc53e5d2e845b48ac7e7bb749eb, type: 2}

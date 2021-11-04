@@ -19,5 +19,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cbbe44ca3c7ef74987c7270f00d35bc, type: 2}
   - {fileID: 11400000, guid: 9d16b164213d5a243bcdfd98b96f4101, type: 2}
   scriptChoices:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 574db05abb0e9084dacfcd74bf4ccf9a, type: 2}
+  - {fileID: 11400000, guid: cb985e071762c574d8679bdf4c04e0cf, type: 2}
+  lineIndex: 5

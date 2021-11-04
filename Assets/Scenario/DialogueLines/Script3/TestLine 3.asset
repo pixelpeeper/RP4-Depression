@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
-  m_Name: TestLine
+  m_Name: TestLine 3
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: That was the correct choice!
+  dialogueText: And yet you pressed it anyway...
