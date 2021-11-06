@@ -22,7 +22,10 @@ public class ClickInteraction : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Interactable")
                 {
                     ClickableObject clickedObject = hit.collider.gameObject.GetComponent<ClickableObject>();
-                    clickedObject.Interact();
+                    if (clickedObject != null)
+                    {
+                        clickedObject.Interact();
+                    }
                 }
             }
         }

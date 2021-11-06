@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class NPCdialogueManager : MonoBehaviour
 {
+    public static NPCdialogueManager instance;
+    
     public bool isButtonClick = false;
     public GameObject dialoguePrefab;
-    public GameObject mask;
+    public GameObject npc;
+    //public GameObject mask;
     List<GameObject> dialogueBlockList = new List<GameObject>();
     public Transform roll;
     Vector3 originPos;
     int count = 0;
+    BlurBackground blurBackground;
 
     [SerializeField]
     int dialogueCount = 30;
@@ -20,10 +24,18 @@ public class NPCdialogueManager : MonoBehaviour
 
     [SerializeField]
     int interpolationFramesCount = 500;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        originPos = roll.position;
+        blurBackground = FindObjectOfType<BlurBackground>();
+
+        originPos = roll.localPosition;
 
         for(int i = 0; i < dialogueCount; i++)
         {
@@ -32,7 +44,7 @@ public class NPCdialogueManager : MonoBehaviour
             dialogueBlockList.Add(dialogueBlock);
         }
 
-        mask.SetActive(false);
+        this.npc.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,27 +55,32 @@ public class NPCdialogueManager : MonoBehaviour
 
     public void AddDialogue(string s)
     {
+        if (!blurBackground.isBlur)
+            blurBackground.StartBlur();
+
         isButtonClick = false;
-        mask.SetActive(true);
+        Debug.Log(s);
         /*
         GameObject dialogueBlock = Instantiate(dialoguePrefab, roll);
         dialogueBlock.transform.localPosition = new Vector3(0, -180, 0);
         dialogueBlockList.Add(dialogueBlock);
         */
+        Debug.Log(count);
         dialogueBlockList[count].GetComponentInChildren<Text>().text = s;
         count++;
+        npc.SetActive(true);
         StartCoroutine(MoveDialogue());
 
     }
 
     IEnumerator MoveDialogue()
     {
-        interpolationFramesCount = 500; // Number of frames to completely interpolate between the 2 positions
+        interpolationFramesCount = 120; // Number of frames to completely interpolate between the 2 positions
         int elapsedFrames = 0;
 
         float targetY = roll.localPosition.y + height;
         Vector3 tartgetVector = new Vector3(0, targetY, 0);
-        while(elapsedFrames >= interpolationFramesCount || roll.localPosition.y != targetY)
+        while(elapsedFrames < interpolationFramesCount || roll.localPosition.y != targetY)
         {
             float interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
 
@@ -75,25 +92,33 @@ public class NPCdialogueManager : MonoBehaviour
             } 
             else
             {
-                elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);
+                elapsedFrames++;
+                //elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);
             }
+            Debug.Log("frame:" + elapsedFrames);
             yield return null;
         }
     }
 
     public void ResetDialogue()
     {
-        roll.position = originPos;
+        Debug.Log("reset dialogue");
+        roll.localPosition = originPos;
         count = 0;
         foreach(var l in dialogueBlockList)
         {
             l.GetComponentInChildren<Text>().text = "";
         }
+        npc.SetActive(false);
     }
 
     public void ButtonClicked()
     {
         isButtonClick = true;
-        mask.SetActive(false);
+        
+
+        /*
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();*/
     }
 }

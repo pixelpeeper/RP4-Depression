@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
+    public static TextManager instance;
+    
     //1 line b:260 n:120
     //2 line b:320 n:190
     //3 line b:380 n:260
@@ -13,8 +15,7 @@ public class TextManager : MonoBehaviour
     public RectTransform narrTrans;
     public Text narrative;
 
-    [SerializeField]
-    float delayTime = 0.08f;
+    private float delayTime = 0.01f;
 
     int[] backgroundHeight = { 200, 250, 320, 380 };
     int[] narrativeHeight = { 120, 190, 260, 315 };
@@ -22,13 +23,23 @@ public class TextManager : MonoBehaviour
     public bool isButtonClick = false;
     string currentString;
     IEnumerator co;
+    BlurBackground blurBackground;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
+        blurBackground = FindObjectOfType<BlurBackground>();
     }
 
     public void ChangeText(string s)
     {
+        if (!blurBackground.isBlur)
+            blurBackground.StartBlur();
+
         currentString = s;
         isButtonClick = false;
         narrative.text = "";
@@ -59,7 +70,11 @@ public class TextManager : MonoBehaviour
     
     public void ButtonClicked()
     {
-        if(narrative.text != currentString)
+        /*
+        if (blurBackground.isBlur)
+            blurBackground.EndBlur();*/
+
+        if (narrative.text != currentString)
         {
             StopCoroutine(co);
             narrative.text = currentString;
@@ -71,5 +86,11 @@ public class TextManager : MonoBehaviour
             narrativeBlock.SetActive(false);
 
         }
+    }
+
+    public void HideBlock()
+    {
+        narrative.text = "";
+        narrativeBlock.SetActive(false);
     }
 }

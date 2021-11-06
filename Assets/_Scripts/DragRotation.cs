@@ -7,6 +7,8 @@ public enum RotationMode { Continuous, Discrete };
 
 public class DragRotation : MonoBehaviour
 {
+    public static DragRotation instance;
+    
     public Camera rotatingCamera;
 
     public RotationMode rotationMode = RotationMode.Continuous;
@@ -28,6 +30,8 @@ public class DragRotation : MonoBehaviour
 
     private Coroutine rotationCoroutine = null;
 
+    public bool currentlyActive = true;
+
     public void ToggleRotationMode()
     {
         if (this.rotationMode == RotationMode.Continuous)
@@ -44,15 +48,19 @@ public class DragRotation : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (this.currentlyActive == false)
+        {
+            return;
+        }
+        
         if (this.rotationMode == RotationMode.Continuous)
         {
             this.ContinuousUpdate();
