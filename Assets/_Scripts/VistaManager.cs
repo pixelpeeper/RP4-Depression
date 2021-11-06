@@ -51,7 +51,7 @@ public class VistaManager : MonoBehaviour
         while (!HasCameraReachedVista(targetVista))
         {
             this.cameraHolder.transform.position = Vector3.Lerp(this.cameraHolder.transform.position, targetVista.cameraPosition, this.moveSpeed * Time.fixedDeltaTime);
-            this.playerCamera.transform.rotation = Quaternion.RotateTowards(this.playerCamera.transform.rotation, Quaternion.Euler(targetVista.cameraEulerRotation), this.rotationSpeed * Time.fixedDeltaTime);
+            this.playerCamera.transform.rotation = Quaternion.RotateTowards(this.playerCamera.transform.rotation, Quaternion.Euler(targetVista.cameraEulerRotation), this.rotationSpeed);
             yield return null;
         }
 

@@ -20,10 +20,15 @@ public class NPCdialogueManager : MonoBehaviour
     [SerializeField]
     int dialogueCount = 30;
     [SerializeField]
-    int height = 85;
+    float height = 85;
 
     [SerializeField]
     int interpolationFramesCount = 500;
+
+    float moveSpeed = 15f;
+
+    Vector3 targetVector;
+    Coroutine currentCoroutine;
 
     private void Awake()
     {
@@ -37,6 +42,8 @@ public class NPCdialogueManager : MonoBehaviour
 
         originPos = roll.localPosition;
 
+        height = dialoguePrefab.GetComponent<RectTransform>().rect.height;
+
         for(int i = 0; i < dialogueCount; i++)
         {
             GameObject dialogueBlock = Instantiate(dialoguePrefab, roll);
@@ -47,12 +54,6 @@ public class NPCdialogueManager : MonoBehaviour
         this.npc.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddDialogue(string s)
     {
         if (!blurBackground.isBlur)
@@ -60,44 +61,36 @@ public class NPCdialogueManager : MonoBehaviour
 
         isButtonClick = false;
         Debug.Log(s);
-        /*
-        GameObject dialogueBlock = Instantiate(dialoguePrefab, roll);
-        dialogueBlock.transform.localPosition = new Vector3(0, -180, 0);
-        dialogueBlockList.Add(dialogueBlock);
-        */
         Debug.Log(count);
         dialogueBlockList[count].GetComponentInChildren<Text>().text = s;
         count++;
         npc.SetActive(true);
-        StartCoroutine(MoveDialogue());
 
+        if (currentCoroutine == null)
+        {
+            currentCoroutine = StartCoroutine(MoveDialogue());
+        }
+        else
+        {
+            StopCoroutine(currentCoroutine);
+            roll.localPosition = targetVector;
+            currentCoroutine = StartCoroutine(MoveDialogue());
+        }
     }
 
     IEnumerator MoveDialogue()
     {
-        interpolationFramesCount = 120; // Number of frames to completely interpolate between the 2 positions
-        int elapsedFrames = 0;
-
         float targetY = roll.localPosition.y + height;
-        Vector3 tartgetVector = new Vector3(0, targetY, 0);
-        while(elapsedFrames < interpolationFramesCount || roll.localPosition.y != targetY)
+        targetVector = new Vector3(0, targetY, 0);
+        while(Mathf.Abs(roll.localPosition.y - targetY) > 0.1f)
         {
-            float interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
-
-            roll.localPosition = Vector3.Lerp(roll.localPosition, tartgetVector, interpolationRatio);
-
-            if (elapsedFrames >= interpolationFramesCount) {
-                elapsedFrames = interpolationFramesCount;
-                roll.localPosition = tartgetVector;
-            } 
-            else
-            {
-                elapsedFrames++;
-                //elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);
-            }
-            Debug.Log("frame:" + elapsedFrames);
+            roll.localPosition = Vector3.Lerp(roll.localPosition, targetVector, this.moveSpeed * Time.fixedDeltaTime);
             yield return null;
         }
+
+        roll.localPosition = targetVector;
+
+        currentCoroutine = null;
     }
 
     public void ResetDialogue()

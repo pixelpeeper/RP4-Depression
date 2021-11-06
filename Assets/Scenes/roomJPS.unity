@@ -435,8 +435,8 @@ MonoBehaviour:
     cameraEulerRotation: {x: 30, y: -40, z: 0}
     npcPosition: {x: 0, y: 0, z: 0}
     npcEulerRotation: {x: 0, y: 0, z: 0}
-  moveSpeed: 0.5
-  rotationSpeed: 7
+  moveSpeed: 5
+  rotationSpeed: 5
   cameraHolder: {fileID: 619027947}
   playerCamera: {fileID: 1950312910}
 --- !u!114 &619027953
