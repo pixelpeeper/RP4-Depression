@@ -13,7 +13,7 @@ public class FadeColor : MonoBehaviour
 
     //[SerializeField]
     //Color targetColor;
-    public Color[] ColorList;
+    public Color[] ColorList = { new Color(60, 95, 127, 1), new Color(107, 93, 126, 1), new Color(183, 109, 134, 1), new Color(229, 115, 128, 1), new Color(240, 178, 146, 1), new Color(240, 221, 146) };
 
     //public Material _material;
     public int interpolationFramesCount = 45; // Number of frames to completely interpolate between the 2 positions
@@ -29,9 +29,25 @@ public class FadeColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(StartFading());
+        }*/
+    }
+
+    public IEnumerator NPCfading(int npcStaus)
+    {
+        float interpolationRatio;
+
+        Color targetColor = ColorList[npcStaus];
+
+        while (_material.color != targetColor)
+        {
+            interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
+            _material.SetColor("_Color", Color.Lerp(originColor, targetColor, interpolationRatio));
+            elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);
+            yield return new WaitForSeconds(fadingSpeed);
         }
     }
 
