@@ -86,7 +86,10 @@ public class ScenarioManager : MonoBehaviour
                 TextManager.instance.ChangeText(nextLine.dialogueText);
                 break;
             case DialogueSpeaker.NPC:
-                NPCdialogueManager.instance.AddDialogue(nextLine.dialogueText);
+                NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.NPC, nextLine.dialogueText);
+                break;
+            case DialogueSpeaker.Player:
+                NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.Player, nextLine.dialogueText);
                 break;
             default:
                 Debug.LogError("Unknown dialogue speaker");

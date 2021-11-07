@@ -1362,6 +1362,8 @@ MonoBehaviour:
   dialogueCount: 30
   height: 85
   interpolationFramesCount: 500
+  npcBubble: {fileID: 21300000, guid: 09f4edf79f86147438bbe37b941eaf04, type: 3}
+  playerBubble: {fileID: 21300000, guid: 8aea797111cbbd643873de1ba06b43db, type: 3}
 --- !u!114 &619027954
 MonoBehaviour:
   m_ObjectHideFlags: 0
