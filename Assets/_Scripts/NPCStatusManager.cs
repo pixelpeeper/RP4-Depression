@@ -22,7 +22,6 @@ public class NPCStatusManager : MonoBehaviour
     public void DecreaseNPCStatus(float decreaseAmount)
     {
         this.currentNPCStatus -= decreaseAmount;
-        this.CheckForFailure();
     }
 
     public void IncreaseNPCStatus(float increaseAmount)
@@ -35,16 +34,19 @@ public class NPCStatusManager : MonoBehaviour
         }
     }
 
-    private void CheckForFailure()
+    public bool CheckForFailure()
     {
         if (this.currentNPCStatus <= this.failureThreshold)
         {
-            Debug.LogError("FAILED");
-            if (this.playerFailed != null)
+            return true;
+            /*if (this.playerFailed != null)
             {
-                Debug.LogError("Not null");
                 this.playerFailed();
+                return true;
             }
+            */
         }
+
+        return false;
     }
 }
