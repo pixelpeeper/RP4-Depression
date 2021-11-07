@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
   m_Name: TestLine 4
   m_EditorClassIdentifier: 
-  speaker: 1
-  dialogueText: Oh boy!
+  speaker: 2
+  dialogueText: Check it out, I'm a player bubble!

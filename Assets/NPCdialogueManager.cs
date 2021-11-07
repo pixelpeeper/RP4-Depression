@@ -30,6 +30,11 @@ public class NPCdialogueManager : MonoBehaviour
     Vector3 targetVector;
     Coroutine currentCoroutine;
 
+    [SerializeField]
+    private Sprite npcBubble;
+    [SerializeField]
+    private Sprite playerBubble;
+
     private void Awake()
     {
         instance = this;
@@ -54,7 +59,7 @@ public class NPCdialogueManager : MonoBehaviour
         this.npc.SetActive(false);
     }
 
-    public void AddDialogue(string s)
+    public void AddDialogue(DialogueSpeaker speaker, string s)
     {
         if (!blurBackground.isBlur)
             blurBackground.StartBlur();
@@ -63,9 +68,24 @@ public class NPCdialogueManager : MonoBehaviour
         Debug.Log(s);
         Debug.Log(count);
         dialogueBlockList[count].GetComponentInChildren<Text>().text = s;
+
+        switch (speaker)
+        {
+            case DialogueSpeaker.NPC:
+                dialogueBlockList[count].GetComponent<Image>().sprite = this.npcBubble;
+                break;
+            case DialogueSpeaker.Player:
+                Debug.LogError("Switch the sprite!");
+                dialogueBlockList[count].GetComponent<Image>().sprite = this.playerBubble;
+                break;
+            default:
+                Debug.LogError("Unknown dialogue speaker");
+                break;
+        }
+
         count++;
         npc.SetActive(true);
-
+        
         if (currentCoroutine == null)
         {
             currentCoroutine = StartCoroutine(MoveDialogue());

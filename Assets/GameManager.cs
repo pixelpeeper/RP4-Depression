@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         while (i < dialogue.Length)
         {
 
-            npcDialogueManager.AddDialogue(dialogue[i]);
+            npcDialogueManager.AddDialogue(DialogueSpeaker.NPC, dialogue[i]);
             i++;
             while (!npcDialogueManager.isButtonClick) yield return null;
 
