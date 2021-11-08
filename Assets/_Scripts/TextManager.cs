@@ -17,8 +17,8 @@ public class TextManager : MonoBehaviour
 
     private float delayTime = 0.01f;
 
-    int[] backgroundHeight = { 200, 250, 320, 380 };
-    int[] narrativeHeight = { 120, 190, 260, 315 };
+    int[] backgroundHeight = { 200, 250, 320, 380, 430, 480, 530, 580, 630, 680, 730, 780 };
+    int[] narrativeHeight = { 120, 190, 260, 330, 400, 470, 540, 610, 680, 750, 820, 890, 960 };
     int perLength = 67;
     public bool isButtonClick = false;
     string currentString;

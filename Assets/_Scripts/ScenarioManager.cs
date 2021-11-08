@@ -87,6 +87,7 @@ public class ScenarioManager : MonoBehaviour
                 break;
             case DialogueSpeaker.NPC:
                 NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.NPC, nextLine.dialogueText);
+                nextLine.PlayNarration();
                 break;
             case DialogueSpeaker.Player:
                 NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.Player, nextLine.dialogueText);
