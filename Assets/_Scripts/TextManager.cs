@@ -19,7 +19,7 @@ public class TextManager : MonoBehaviour
 
     int[] backgroundHeight = { 200, 250, 320, 380, 430, 480, 530, 580, 630, 680, 730, 780 };
     int[] narrativeHeight = { 120, 190, 260, 330, 400, 470, 540, 610, 680, 750, 820, 890, 960 };
-    int perLength = 67;
+    int perLength = 58;
     public bool isButtonClick = false;
     string currentString;
     IEnumerator co;

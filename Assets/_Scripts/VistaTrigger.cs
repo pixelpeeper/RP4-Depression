@@ -11,7 +11,11 @@ public class VistaTrigger : ClickableObject
 
     public override void Interact()
     {
-        VistaManager.instance.TriggerVista(this.vistaIndex, startingScript);
-        Destroy(this);
+        if(FindObjectOfType<ScenarioManager>().scenarioCount == vistaIndex)
+        {
+            VistaManager.instance.TriggerVista(this.vistaIndex, startingScript);
+            Destroy(this);
+        }
+        
     }
 }

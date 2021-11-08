@@ -59,6 +59,11 @@ public class VistaManager : MonoBehaviour
 
         this.currentNPCPose = Instantiate(targetVista.npcPose, targetVista.npcPosition, Quaternion.Euler(targetVista.npcEulerRotation)) as GameObject;
 
+        GameObject ChildGameObject1 = this.currentNPCPose.transform.GetChild(0).gameObject;
+        FadeColor f = ChildGameObject1.AddComponent<FadeColor>();
+        while (!f._material) yield return null;
+        f.setNpcColor(FindObjectOfType<NPCStatusManager>().npcStatus);
+
         while (!HasCameraReachedVista(targetVista))
         {
             this.cameraHolder.transform.position = Vector3.Lerp(this.cameraHolder.transform.position, targetVista.cameraPosition, this.moveSpeed * Time.deltaTime);

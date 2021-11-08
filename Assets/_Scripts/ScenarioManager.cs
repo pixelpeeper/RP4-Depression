@@ -45,6 +45,8 @@ public class ScenarioManager : MonoBehaviour
     private Button tapToRetryButton;
     [SerializeField]
     private TextMeshProUGUI tapToRetryMessage;
+
+    public int scenarioCount = 0;
     
     void Awake()
     {
@@ -76,6 +78,7 @@ public class ScenarioManager : MonoBehaviour
             else
             {
                 this.EndScenario();
+                scenarioCount++;
             }
             return;
         }

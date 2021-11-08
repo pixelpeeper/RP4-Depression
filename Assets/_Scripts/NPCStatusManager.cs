@@ -9,8 +9,8 @@ public class NPCStatusManager : MonoBehaviour
     public float currentNPCStatus = 0.5f;
     private float failureThreshold = 0.25f;
 
-    int npcStatus = 0;
-    public FadeColor npcFadeColor;
+    public int npcStatus = 0;
+    FadeColor npcFadeColor;
 
     public delegate void OnFailure();
     public OnFailure playerFailed;
@@ -28,7 +28,7 @@ public class NPCStatusManager : MonoBehaviour
         npcStatus--;
         if (npcStatus < 0) npcStatus = 0;
 
-        //StartCoroutine(npcFadeColor.NPCfading(npcStatus));
+        StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
 
     }
 
@@ -42,9 +42,9 @@ public class NPCStatusManager : MonoBehaviour
         }
 
         npcStatus++;
-        if (npcStatus > 6) npcStatus = 6;
+        if (npcStatus > 5) npcStatus = 6;
 
-        //StartCoroutine(npcFadeColor.NPCfading(npcStatus));
+        StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
     }
 
     public bool CheckForFailure()
