@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ClickableObject : MonoBehaviour
 {
-    public MeshRenderer currentRenderer;
+    private MeshRenderer currentRenderer;
 
-    public Material interactMaterial1;
-    public Material interactMaterial2;
+    private Material interactMaterial1;
+    private Material interactMaterial2;
 
     public virtual void Interact()
     {
