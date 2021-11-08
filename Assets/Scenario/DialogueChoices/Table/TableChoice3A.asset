@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9b2122519e08041b9a7405ff9d1a4e, type: 3}
   m_Name: TableChoice3A
   m_EditorClassIdentifier: 
-  choiceName: Personal Experiences
+  choiceName: Relate with your own experiences
   npcImpact: 1
   npcStatusImpactValue: 0
   correspondingScript: {fileID: 11400000, guid: f3dd644ffa6468443b346b1d9f3fe811, type: 2}

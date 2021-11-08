@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line11
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: Your friend remains tense at your words but after a few seconds pause,
+    they open the door to let you in.
+  narrationLine: {fileID: 8300000, guid: 03ab123c60c0ac946a9a6a13e5756b13, type: 3}

@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: TableScript8
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  scriptChoices: []
+  - {fileID: 11400000, guid: 76368df4b5e95a34684864d35d441838, type: 2}
+  - {fileID: 11400000, guid: 9c3eb8947d9d23446ae1152f23413f06, type: 2}
+  - {fileID: 11400000, guid: aa52344e23546764f8eed4cca9d7cf2b, type: 2}
+  - {fileID: 11400000, guid: c19796b3d41295940ab946a473ff072d, type: 2}
+  - {fileID: 11400000, guid: da62a42caa9bb7140acd76c507838fb5, type: 2}
+  - {fileID: 11400000, guid: 3518f060f31d8264bafc4329f8e4ad18, type: 2}
+  - {fileID: 11400000, guid: 8f50eaaca5a510d4c813b4c2cc1744be, type: 2}
+  - {fileID: 11400000, guid: 57af714f5ef4d4441bad0b712724f584, type: 2}
+  - {fileID: 11400000, guid: 5d37eeb2fc01d5848af37a0c0efa194b, type: 2}
+  scriptChoices:
+  - {fileID: 11400000, guid: 35cc538deb10a0b428ffc44faadb245d, type: 2}
+  - {fileID: 11400000, guid: 7d3d8f5bcbf593b41a2c063b5c5bb57f, type: 2}
   lineIndex: 0

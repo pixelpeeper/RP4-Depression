@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line11
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "It\u2019s a lot of energy and overwhelming almost to even think
+    about."
   narrationLine: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "No, no. It\u2019s more that I don\u2019t have the energy to respond."
   narrationLine: {fileID: 0}

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "After a while, you both move to the couch and sit in front of the
+    TV. Your friend turned something on, and you are both relaxing in each other\u2019s
+    presence."
+  narrationLine: {fileID: 8300000, guid: c7c3b364889405c44876f26eec8d94a8, type: 3}

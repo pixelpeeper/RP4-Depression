@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "You didn\u2019t get a response from your friend on whether or not
+    you could come over, but you have been worried for them these last few weeks."
+  narrationLine: {fileID: 8300000, guid: 920b60ef80755c44abe1d562579601c8, type: 3}

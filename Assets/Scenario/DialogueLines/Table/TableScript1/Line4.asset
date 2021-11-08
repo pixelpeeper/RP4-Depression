@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Your friend sends you a grateful smile. Now is the perfect moment
+    to talk, but where to begin?
+  narrationLine: {fileID: 8300000, guid: cec2ef5989c78a343a53ced28860badf, type: 3}

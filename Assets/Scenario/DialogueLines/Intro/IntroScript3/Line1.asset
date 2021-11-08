@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "I\u2019m so sorry to hear that."
   narrationLine: {fileID: 0}

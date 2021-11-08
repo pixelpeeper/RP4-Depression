@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "If you\u2019re not getting what you want from your therapist,"
   narrationLine: {fileID: 0}

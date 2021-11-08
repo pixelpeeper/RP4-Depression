@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "You have to remember that they are having a difficult time, so let\u2019s
+    try and get an invitation in as gently as possible."
+  narrationLine: {fileID: 8300000, guid: a6c3706982e8d1242849cc7d0e5772f0, type: 3}

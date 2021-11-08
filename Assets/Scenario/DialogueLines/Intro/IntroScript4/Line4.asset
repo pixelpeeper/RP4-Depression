@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "It\u2019s just been a long couple of weeks."
   narrationLine: {fileID: 0}

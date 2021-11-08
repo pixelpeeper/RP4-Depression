@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "Hey, I sent you a text but didn\u2019t hear back."
   narrationLine: {fileID: 0}

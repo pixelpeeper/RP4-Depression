@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "You can see that your friend isn\u2019t going to immediately invite
+    you in. You\u2019ve caught them off guard with your visit. Let\u2019s have you
+    try and get an invite in."
+  narrationLine: {fileID: 8300000, guid: 2a5e3e33823c89840a23f72fe9926ab7, type: 3}

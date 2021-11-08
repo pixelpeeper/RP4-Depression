@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line10
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "A bit of both? But I think it\u2019s more that I just can\u2019t
+    get out of bed. "
   narrationLine: {fileID: 0}

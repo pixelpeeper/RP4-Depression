@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "My apartment isn\u2019t the cleanest\u2026"
   narrationLine: {fileID: 0}

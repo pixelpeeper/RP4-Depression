@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: TableScript2
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f8ca06a968fd3ad43bc5dddaf8192734, type: 2}
+  - {fileID: 11400000, guid: 11c31a82a5393c44ab93b02ae8af4e11, type: 2}
+  - {fileID: 11400000, guid: b8dcd1913178f634a891945cf75357cd, type: 2}
+  - {fileID: 11400000, guid: d67e82d9740b61542b3d714c4cfccd10, type: 2}
+  - {fileID: 11400000, guid: 85f91644df7899f4b883bef7990ecf70, type: 2}
+  - {fileID: 11400000, guid: 82909ff1cfd3c3a4d8dcfee1f4623167, type: 2}
+  - {fileID: 11400000, guid: 4d6dab5f1672b16449c200c7fb62c30e, type: 2}
   scriptChoices:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 672b8f8d5b1f2aa4bb97f68f4c71b68c, type: 2}
+  - {fileID: 11400000, guid: 27bdf5a9bd6c3834e8b29ee993015290, type: 2}
   lineIndex: 0

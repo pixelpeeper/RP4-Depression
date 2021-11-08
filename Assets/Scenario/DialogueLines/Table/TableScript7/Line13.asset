@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line13
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Good. By asking questions you not only show that you are listening
+    to them, but also that you care about their experience.
+  narrationLine: {fileID: 8300000, guid: 0edc8da69ea9ade4e8597d61bb5292ff, type: 3}

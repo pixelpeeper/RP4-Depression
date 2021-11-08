@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
   m_Name: Line12
   m_EditorClassIdentifier: 
-  speaker: 0
-  dialogueText: Test Text
+  speaker: 2
+  dialogueText: "I\u2019m sure you\u2019ll think of how to say what you\u2019re feeling"
   narrationLine: {fileID: 0}

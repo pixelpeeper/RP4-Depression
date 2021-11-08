@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "You don\u2019t see signs of self-harm but you know they\u2019re
+    struggling and want to check in to make sure they\u2019re okay."
+  narrationLine: {fileID: 8300000, guid: aa953952ecfe023478a7984051796ac0, type: 3}

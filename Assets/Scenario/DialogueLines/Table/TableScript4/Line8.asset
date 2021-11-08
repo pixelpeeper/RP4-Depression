@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line8
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "We\u2019re still in the \u2018getting-to-know-you\u2019 phase."
   narrationLine: {fileID: 0}

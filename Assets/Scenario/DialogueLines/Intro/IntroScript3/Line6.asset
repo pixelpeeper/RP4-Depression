@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "All right. But don\u2019t say I didn\u2019t warn you."
   narrationLine: {fileID: 0}

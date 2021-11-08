@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Next time, try to offer some assistance. Doing tasks together is
+    easier than doing them alone.
+  narrationLine: {fileID: 8300000, guid: 2d992d5b37cef4b4bb4768167e9f741b, type: 3}

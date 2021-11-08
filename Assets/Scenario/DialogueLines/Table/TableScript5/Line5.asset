@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "I know we can\u2019t just dive into things,"
   narrationLine: {fileID: 0}

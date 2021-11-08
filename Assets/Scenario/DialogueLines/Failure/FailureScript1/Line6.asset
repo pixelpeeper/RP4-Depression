@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "Some of your actions may have contributed to your friend\u2019s
+    anxiety. Being asked to leave may feel discouraging, but that doesn\u2019t mean
+    you can\u2019t try again."
+  narrationLine: {fileID: 8300000, guid: 27f1378c3adaec94f9538c6966ca31e6, type: 3}

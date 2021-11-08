@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "I\u2019ve been meaning to get some cleaning done."
   narrationLine: {fileID: 0}

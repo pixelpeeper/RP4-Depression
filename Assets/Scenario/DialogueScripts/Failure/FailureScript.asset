@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FailureScript
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 768a658c6e59bff47aee1b25f6b1aa10, type: 2}
+  - {fileID: 11400000, guid: cbb32a2e1b2a86c41b99c2a36b054aa8, type: 2}
+  - {fileID: 11400000, guid: f4811ca44b3ff094abb34b3d851b3c0d, type: 2}
+  - {fileID: 11400000, guid: 017989b6341c1404a9c9c6cfb1177b22, type: 2}
+  - {fileID: 11400000, guid: e10e836a043c915428a47696b00bced8, type: 2}
+  - {fileID: 11400000, guid: e7042b6ec5fd52f4582f40c74dd3e0a6, type: 2}
+  - {fileID: 11400000, guid: 43abdf083cef30a49ab9bf00eb06426c, type: 2}
   scriptChoices: []
   lineIndex: 0

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line14
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "but it might be better to validate their experience and ask if they\u2019d
+    like to share more about it."
+  narrationLine: {fileID: 8300000, guid: 615f08520318fed4d9cc2fb9fc307ce6, type: 3}

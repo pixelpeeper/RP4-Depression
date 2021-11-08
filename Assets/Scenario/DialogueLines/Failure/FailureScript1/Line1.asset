@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: I-I appreciate you coming and you coming to check up on me,
   narrationLine: {fileID: 0}

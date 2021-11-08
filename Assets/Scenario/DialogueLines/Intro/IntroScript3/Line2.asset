@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: Is it okay if I come and we can talk for a little bit?
   narrationLine: {fileID: 0}

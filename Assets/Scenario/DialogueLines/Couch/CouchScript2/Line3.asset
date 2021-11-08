@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "I haven\u2019t had the energy to do anything and just want to stay
+    in my apartment."
   narrationLine: {fileID: 0}

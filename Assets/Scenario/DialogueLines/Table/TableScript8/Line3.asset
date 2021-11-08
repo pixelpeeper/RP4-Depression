@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "That\u2019s good that you\u2019ve considered it at least."
   narrationLine: {fileID: 0}

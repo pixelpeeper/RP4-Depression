@@ -13,14 +13,12 @@ MonoBehaviour:
   m_Name: IntroScript3
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  scriptChoices:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 952dc5c32318e7746812783c2e961123, type: 2}
+  - {fileID: 11400000, guid: b9621ba80db1054458b4a51885a25054, type: 2}
+  - {fileID: 11400000, guid: 14bd8debbdea51541b6768bc75301ae0, type: 2}
+  - {fileID: 11400000, guid: d50d22d14c74a2d4eb8dc4f0e045984f, type: 2}
+  - {fileID: 11400000, guid: ff1d70c39bda0b54da5f41d8e2c7b9e2, type: 2}
+  - {fileID: 11400000, guid: 968ddc8999de7204db3d6c5b3e225951, type: 2}
+  - {fileID: 11400000, guid: 27f3e54ed52a22141a84ce558a4aa4cf, type: 2}
+  scriptChoices: []
   lineIndex: 0

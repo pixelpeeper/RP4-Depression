@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
+  m_Name: Line10
+  m_EditorClassIdentifier: 
+  speaker: 0
+  dialogueText: "It minimizes your friend\u2019s experience and can lead to a dead-end
+    in a conversation.  Maybe now would be a better time to ask more about what they
+    are experiencing."
+  narrationLine: {fileID: 8300000, guid: de7a60da3dcb99b46889ab77753f7bdc, type: 3}

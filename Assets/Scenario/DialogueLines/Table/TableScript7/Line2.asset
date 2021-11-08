@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "Is that because I\u2019m saying something that makes you uncomfortable?"
   narrationLine: {fileID: 0}

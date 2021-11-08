@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "This would be an excellent time to gauge how your friend is doing.
+    They\u2019ve been unresponsive to a lot of your texts and invites and that has
+    made you worried."
+  narrationLine: {fileID: 8300000, guid: 0c2fdacb2ea0d65448ff69f94b1d77da, type: 3}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "Thank you, I\u2019m sorry I haven\u2019t been responsive. It\u2019s
+    been kind of a difficult week."
   narrationLine: {fileID: 0}

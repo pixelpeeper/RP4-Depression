@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line12
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "Your advice wasn\u2019t taken how you expected. Sometimes advice,
+    even good advice, won\u2019t be what your friend wants to hear at the moment."
+  narrationLine: {fileID: 8300000, guid: d0270559a94424c4db44ef55065202fb, type: 3}
