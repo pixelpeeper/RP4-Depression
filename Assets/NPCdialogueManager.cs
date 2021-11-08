@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NPCdialogueManager : MonoBehaviour
 {
@@ -67,7 +68,7 @@ public class NPCdialogueManager : MonoBehaviour
         isButtonClick = false;
         Debug.Log(s);
         Debug.Log(count);
-        dialogueBlockList[count].GetComponentInChildren<Text>().text = s;
+        dialogueBlockList[count].GetComponentInChildren<TextMeshProUGUI>().text = s;
 
         switch (speaker)
         {
@@ -120,7 +121,7 @@ public class NPCdialogueManager : MonoBehaviour
         count = 0;
         foreach(var l in dialogueBlockList)
         {
-            l.GetComponentInChildren<Text>().text = "";
+            l.GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
         npc.SetActive(false);
     }

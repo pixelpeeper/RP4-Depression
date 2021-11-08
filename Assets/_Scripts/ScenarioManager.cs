@@ -84,10 +84,10 @@ public class ScenarioManager : MonoBehaviour
         {
             case DialogueSpeaker.Narrator:
                 TextManager.instance.ChangeText(nextLine.dialogueText);
+                nextLine.PlayNarration();
                 break;
             case DialogueSpeaker.NPC:
                 NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.NPC, nextLine.dialogueText);
-                nextLine.PlayNarration();
                 break;
             case DialogueSpeaker.Player:
                 NPCdialogueManager.instance.AddDialogue(DialogueSpeaker.Player, nextLine.dialogueText);
@@ -103,10 +103,13 @@ public class ScenarioManager : MonoBehaviour
         this.nextDialogueButton.SetActive(false);
 
         this.choiceButton1.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[0];
-        this.choiceButton2.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[1];
-
         this.choiceButton1.SetActive(true);
-        this.choiceButton2.SetActive(true);
+
+        if (this.currentScript.scriptChoices.Count > 1)
+        {
+            this.choiceButton2.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[1];
+            this.choiceButton2.SetActive(true);
+        }
     }
 
     private void EndScenario()

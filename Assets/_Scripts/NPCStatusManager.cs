@@ -28,7 +28,7 @@ public class NPCStatusManager : MonoBehaviour
         npcStatus--;
         if (npcStatus < 0) npcStatus = 0;
 
-        StartCoroutine(npcFadeColor.NPCfading(npcStatus));
+        //StartCoroutine(npcFadeColor.NPCfading(npcStatus));
 
     }
 
@@ -44,7 +44,7 @@ public class NPCStatusManager : MonoBehaviour
         npcStatus++;
         if (npcStatus > 6) npcStatus = 6;
 
-        StartCoroutine(npcFadeColor.NPCfading(npcStatus));
+        //StartCoroutine(npcFadeColor.NPCfading(npcStatus));
     }
 
     public bool CheckForFailure()

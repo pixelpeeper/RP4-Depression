@@ -22,7 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f50eaaca5a510d4c813b4c2cc1744be, type: 2}
   - {fileID: 11400000, guid: 57af714f5ef4d4441bad0b712724f584, type: 2}
   - {fileID: 11400000, guid: 5d37eeb2fc01d5848af37a0c0efa194b, type: 2}
-  scriptChoices:
-  - {fileID: 11400000, guid: 35cc538deb10a0b428ffc44faadb245d, type: 2}
-  - {fileID: 11400000, guid: 7d3d8f5bcbf593b41a2c063b5c5bb57f, type: 2}
+  scriptChoices: []
   lineIndex: 0
