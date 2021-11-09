@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "I brought over your favorite treat and thought I\u2019d stop by
+    to make sure you\u2019re doing alright."
   narrationLine: {fileID: 0}

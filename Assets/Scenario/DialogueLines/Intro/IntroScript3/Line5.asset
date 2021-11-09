@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "That\u2019s okay. You know I\u2019ve never been one to judge."
   narrationLine: {fileID: 0}

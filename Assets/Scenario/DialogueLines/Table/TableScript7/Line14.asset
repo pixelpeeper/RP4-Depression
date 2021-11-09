@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line14
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "In situations like these, it\u2019s best to listen with an open
+    mind and give as much support as you can."
+  narrationLine: {fileID: 8300000, guid: 0c998717d567643488291771d887bca2, type: 3}

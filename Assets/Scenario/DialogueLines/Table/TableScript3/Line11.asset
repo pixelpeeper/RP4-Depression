@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line11
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "Is there anything else or are those the major things that you\u2019ve
+    noticed?"
   narrationLine: {fileID: 0}

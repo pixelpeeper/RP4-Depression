@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "You share a smile with your friend. You know that they are in no
+    way better, but at least you\u2019ve let them know you\u2019re here for them.
+    And sometimes, that\u2019s the best you can do."
+  narrationLine: {fileID: 8300000, guid: 4b5f579457348324e98f4ec991b621be, type: 3}

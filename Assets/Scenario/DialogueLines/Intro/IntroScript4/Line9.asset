@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
   m_Name: Line9
   m_EditorClassIdentifier: 
-  speaker: 0
-  dialogueText: Narrator
+  speaker: 2
+  dialogueText: "I want to come in and see how you\u2019re doing."
   narrationLine: {fileID: 0}

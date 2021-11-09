@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "Oh, um. I don\u2019t even know where to start."
   narrationLine: {fileID: 0}

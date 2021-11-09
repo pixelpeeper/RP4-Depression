@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line8
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: And when you say you are sleeping too much,
   narrationLine: {fileID: 0}

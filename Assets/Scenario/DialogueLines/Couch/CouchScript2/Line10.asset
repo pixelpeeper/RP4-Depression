@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line10
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "this would be a great opportunity to validate how they feel in order
+    to help them know you\u2019re really hearing them."
+  narrationLine: {fileID: 8300000, guid: b8669bc18864fb04da0db0b95a536ba4, type: 3}

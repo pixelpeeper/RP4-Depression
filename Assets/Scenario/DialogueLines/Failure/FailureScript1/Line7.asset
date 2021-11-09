@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line7
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Take this as an opportunity to learn, and give it another go.
+  narrationLine: {fileID: 8300000, guid: 03b1189843a46e54f8058cb37c254fef, type: 3}

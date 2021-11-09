@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line9
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Comparing your experiences can feel like you're saying, "yes what
+    you're feeling is bad. But it could be much worse".
+  narrationLine: {fileID: 8300000, guid: 0638f66db6bf0e3458953ff677686ba8, type: 3}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line9
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "is it because you\u2019re staying up late or you can\u2019t get
+    out of bed?"
   narrationLine: {fileID: 0}

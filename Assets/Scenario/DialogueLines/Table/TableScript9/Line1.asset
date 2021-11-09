@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "Wow. You weren\u2019t kidding. It looks like a tornado went off
+    in here."
   narrationLine: {fileID: 0}

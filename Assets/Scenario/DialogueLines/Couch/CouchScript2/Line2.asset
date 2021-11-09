@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "You\u2019re right. These last couple of weeks haven\u2019t been
+    the easiest."
   narrationLine: {fileID: 0}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: You definitely did. Would you like some help cleaning a few things
+    up?
   narrationLine: {fileID: 0}

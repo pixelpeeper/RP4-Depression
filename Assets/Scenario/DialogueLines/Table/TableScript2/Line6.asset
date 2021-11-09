@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: Your friend was responsive to your question which is good, but now
+    you have to decide how you want to move forward.
+  narrationLine: {fileID: 8300000, guid: fa17a177e44cb684681043b6a4acf322, type: 3}

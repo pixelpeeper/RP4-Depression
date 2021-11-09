@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line7
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "I don\u2019t know if I\u2019m comfortable with that."
   narrationLine: {fileID: 0}

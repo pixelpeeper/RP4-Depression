@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "Don\u2019t worry about it. I came to see you, not your apartment."
   narrationLine: {fileID: 0}

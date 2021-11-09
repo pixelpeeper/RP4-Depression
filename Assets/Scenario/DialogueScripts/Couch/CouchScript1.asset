@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: CouchScript1
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3b2909651ec0d8741a6f1dc71298571a, type: 2}
+  - {fileID: 11400000, guid: 64b7418ebf9e6f5479efc1392bb91e7c, type: 2}
+  - {fileID: 11400000, guid: 4f8a21d80a96c1b4198af12d664345a6, type: 2}
+  - {fileID: 11400000, guid: d6dd65e18abed6c4eaa678a678284049, type: 2}
+  - {fileID: 11400000, guid: b7bd8e77f162ddf4c98322af3a9d2c2d, type: 2}
   scriptChoices:
   - {fileID: 11400000, guid: 591cd111dc96f9a4ea72f42a7c94f46a, type: 2}
   lineIndex: 0

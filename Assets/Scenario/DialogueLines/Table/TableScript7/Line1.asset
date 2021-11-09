@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: You say you have trouble responding to my texts.
   narrationLine: {fileID: 0}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "I won\u2019t know what to look for, but maybe together we can find
+    someone you like."
   narrationLine: {fileID: 0}

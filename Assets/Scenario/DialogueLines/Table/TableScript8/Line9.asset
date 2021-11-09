@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line9
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: "Trying to find a therapist can be a daunting task. By offering your
+    help, you\u2019re making the task manageable while showing your support for your
+    friend."
+  narrationLine: {fileID: 8300000, guid: c041f47540e755b48ac4ea6071147a29, type: 3}

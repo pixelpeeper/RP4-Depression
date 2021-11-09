@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: This was an excellent question. It's openly supportive and acknowledges
+    their struggles without placing blame.
+  narrationLine: {fileID: 8300000, guid: 436447dedd9cf7b46b8dc854bbf41507, type: 3}

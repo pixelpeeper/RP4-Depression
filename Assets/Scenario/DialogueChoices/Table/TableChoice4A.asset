@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9b2122519e08041b9a7405ff9d1a4e, type: 3}
   m_Name: TableChoice4A
   m_EditorClassIdentifier: 
-  choiceName: Ask more questions
+  choiceName: Ask if they have thought about seeing a therapist
   npcImpact: 0
   npcStatusImpactValue: 0
-  correspondingScript: {fileID: 11400000, guid: 0183039c53681d44592c11a131637aee, type: 2}
+  correspondingScript: {fileID: 11400000, guid: 1995f49de5c62ce4c9ed1ab7c7f243aa, type: 2}

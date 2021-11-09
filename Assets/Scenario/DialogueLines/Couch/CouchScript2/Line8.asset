@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line8
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: I thought it was too late to text you back.
   narrationLine: {fileID: 0}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: KitchenScript1
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 55842bae227c62d429feb47f3bd53e53, type: 2}
+  - {fileID: 11400000, guid: f0122117e9ca789438c9ed12a74c40de, type: 2}
+  - {fileID: 11400000, guid: 3e0e4d1bb61c2a84fbe9958d60fe5d24, type: 2}
+  - {fileID: 11400000, guid: 72024e10e4beb0146b1aab475f92a30e, type: 2}
   scriptChoices: []
   lineIndex: 0

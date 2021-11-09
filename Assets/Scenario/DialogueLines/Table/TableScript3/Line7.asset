@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line7
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "I\u2019ve noticed that I\u2019m sleeping a lot more"
   narrationLine: {fileID: 0}

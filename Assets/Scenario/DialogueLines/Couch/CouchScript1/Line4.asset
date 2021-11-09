@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: As you both take a moment to embrace the silence around you, you
+    begin to wonder where to begin.
+  narrationLine: {fileID: 8300000, guid: a254964d333b19a4d97d595e9e3e9f1f, type: 3}

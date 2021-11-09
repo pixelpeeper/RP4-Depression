@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Player
+  dialogueText: "You\u2019ve been worrying me these past few weeks."
   narrationLine: {fileID: 0}

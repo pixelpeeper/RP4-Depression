@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "I didn\u2019t mean to ignore your texts or anything."
   narrationLine: {fileID: 0}

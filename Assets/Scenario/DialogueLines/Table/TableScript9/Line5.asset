@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: By commenting on the state of the apartment, your friend might take
+    that as judgment and blame. Everyday tasks like cleaning can be difficult when
+    you have depression.
+  narrationLine: {fileID: 8300000, guid: d0b9e07eb85944445b26fc51a761a99e, type: 3}

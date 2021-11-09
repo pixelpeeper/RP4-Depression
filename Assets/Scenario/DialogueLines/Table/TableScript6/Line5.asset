@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: Yeah. Usually, I get out of that funk pretty quickly though.
   narrationLine: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "I wouldn\u2019t want to be anywhere else."
   narrationLine: {fileID: 0}

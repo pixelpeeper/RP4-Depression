@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: IntroScript4
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  scriptChoices:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c82d5a730158d704a897d6d4cf2c4fb8, type: 2}
+  - {fileID: 11400000, guid: 3387417d71cc9034ab69956096ac3c7c, type: 2}
+  - {fileID: 11400000, guid: 34b80d89a80c47d47b122f9ab20b9eff, type: 2}
+  - {fileID: 11400000, guid: caf4cb2d173a90e409e1d671d0ada2f9, type: 2}
+  - {fileID: 11400000, guid: e07af0b1cf4c60446a1d2bb6813de968, type: 2}
+  - {fileID: 11400000, guid: 8371af6a027cbf84ab9c9610a8c26b4c, type: 2}
+  - {fileID: 11400000, guid: 6fe2e13fd1ffa47459a1c534a4872c4c, type: 2}
+  - {fileID: 11400000, guid: 6af0a1a80babbc646ac0bdf2956e0353, type: 2}
+  - {fileID: 11400000, guid: 72f2a9f728eba5643b4106b6d579d0b2, type: 2}
+  - {fileID: 11400000, guid: e4feb467f69e39246be9e9d142fe5db5, type: 2}
+  - {fileID: 11400000, guid: 485584ea071dea84e836868494f89dbc, type: 2}
+  - {fileID: 11400000, guid: 61058787816d02e49900815b282f5daf, type: 2}
+  - {fileID: 11400000, guid: e5a7880f02d2c2649b6ff9bd65c5cc42, type: 2}
+  scriptChoices: []
   lineIndex: 0

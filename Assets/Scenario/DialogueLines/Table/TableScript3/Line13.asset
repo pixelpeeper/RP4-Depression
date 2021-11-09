@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line13
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Test Text
-  narrationLine: {fileID: 0}
+  dialogueText: You now have a clearer idea of what your friend is experiencing.
+    You know that you have gone through some of these things before,
+  narrationLine: {fileID: 8300000, guid: 45f2e6676c21ef34ca7d191abe3c5651, type: 3}

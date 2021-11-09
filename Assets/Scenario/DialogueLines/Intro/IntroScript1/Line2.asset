@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: "You\u2019ve known each other since middle school and have been close
+    friends since middle school. You haven\u2019t seen them in class or heard back
+    from them."
+  narrationLine: {fileID: 8300000, guid: c1faeaf35b421a74e93da80aa16aa981, type: 3}

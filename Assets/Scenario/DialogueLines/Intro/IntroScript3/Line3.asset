@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line3
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: They are starting to look unsure and you notice that they quickly
+    look behind them.
+  narrationLine: {fileID: 8300000, guid: 2d69b8bd1859dc34eb957ab31eb70022, type: 3}

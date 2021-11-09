@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line5
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: Still, I mean, you want these talks to be as productive as possible.
   narrationLine: {fileID: 0}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "I have. It\u2019s just hard to find someone. I don\u2019t know where
+    to begin."
   narrationLine: {fileID: 0}

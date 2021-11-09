@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line4
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: NPC
+  dialogueText: "My new meds don\u2019t seem to be working right and I feel like
+    I should maybe stop them."
   narrationLine: {fileID: 0}

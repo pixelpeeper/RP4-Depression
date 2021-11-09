@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: TableScript4
   m_EditorClassIdentifier: 
   scriptLines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d7ef3f6e4683a224380dbc1faebd74ee, type: 2}
+  - {fileID: 11400000, guid: b78369a76af5dde4f84c8f91a12ac361, type: 2}
+  - {fileID: 11400000, guid: ecdd58187a6511d429c5ace59e204253, type: 2}
+  - {fileID: 11400000, guid: 8b50baaa86364ef418b47a8e97d68e6a, type: 2}
+  - {fileID: 11400000, guid: 16085c502af327a47a3a0260e0710bbc, type: 2}
+  - {fileID: 11400000, guid: 2c21b31d63fd71a42bd7df76d6622373, type: 2}
+  - {fileID: 11400000, guid: ad59445872cb21d439c5ea5f801f81f5, type: 2}
+  - {fileID: 11400000, guid: 49c6cf14bc929cf49a51be34b2aefd94, type: 2}
+  - {fileID: 11400000, guid: 17f60837708575b40a85a1af6617a674, type: 2}
+  - {fileID: 11400000, guid: 86d47f486c628504e9a9c347ee55f916, type: 2}
+  - {fileID: 11400000, guid: b0e9846877fc4b647a61e0e8ab6fa65f, type: 2}
+  - {fileID: 11400000, guid: fd2a5c053dbc46c4f974868e8d129394, type: 2}
+  - {fileID: 11400000, guid: 7194009c7c0e3b0449f8c33b9ff4eaa9, type: 2}
   scriptChoices:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 35cc538deb10a0b428ffc44faadb245d, type: 2}
+  - {fileID: 11400000, guid: 7d3d8f5bcbf593b41a2c063b5c5bb57f, type: 2}
   lineIndex: 0

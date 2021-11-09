@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "I have trouble sleeping too much when I\u2019m stressed"
   narrationLine: {fileID: 0}

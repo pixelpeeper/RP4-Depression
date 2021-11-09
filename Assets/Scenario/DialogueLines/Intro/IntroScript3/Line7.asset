@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line7
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: Well done. By asking to come in, you have given your friend control
+    over the situation and have started this encounter on a brighter note.
+  narrationLine: {fileID: 8300000, guid: 8442e1e543ea6ae4bac7cb1ea3643eb0, type: 3}

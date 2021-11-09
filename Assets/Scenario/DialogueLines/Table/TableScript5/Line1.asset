@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line1
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "When you say, \u201Cnot as productive as you\u2019d been hoping\u201D,"
   narrationLine: {fileID: 0}

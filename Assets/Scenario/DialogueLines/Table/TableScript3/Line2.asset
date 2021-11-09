@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line2
   m_EditorClassIdentifier: 
   speaker: 2
-  dialogueText: Test Text
+  dialogueText: "but is it okay if I ask what exactly you\u2019re experiencing?"
   narrationLine: {fileID: 0}

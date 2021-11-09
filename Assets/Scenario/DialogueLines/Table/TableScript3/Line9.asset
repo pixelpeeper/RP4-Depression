@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line9
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "I also know I haven\u2019t been the best lately with responding
+    to your texts."
   narrationLine: {fileID: 0}

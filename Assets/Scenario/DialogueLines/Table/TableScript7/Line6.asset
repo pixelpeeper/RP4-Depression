@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Line6
   m_EditorClassIdentifier: 
   speaker: 1
-  dialogueText: Test Text
+  dialogueText: "No. This usually happens when I\u2019m like this."
   narrationLine: {fileID: 0}

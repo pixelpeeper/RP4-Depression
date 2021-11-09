@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Line9
   m_EditorClassIdentifier: 
   speaker: 0
-  dialogueText: Narrator
-  narrationLine: {fileID: 0}
+  dialogueText: Your friend goes on to explain their struggles with a recent bout
+    of depression and anxiety, and now you have a better idea of what is happening,
+  narrationLine: {fileID: 8300000, guid: ecf4598ae05c68c4787cf2fed1d3d941, type: 3}

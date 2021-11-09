@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6e7c7f6f1b7da4bbab584600f61a09, type: 3}
   m_Name: Line8
   m_EditorClassIdentifier: 
-  speaker: 2
-  dialogueText: Player
+  speaker: 1
+  dialogueText: "My apartment isn\u2019t the cleanest right now."
   narrationLine: {fileID: 0}

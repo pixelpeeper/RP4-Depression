@@ -10,6 +10,7 @@ public struct VistaSettings
     public Vector3 cameraEulerRotation;
     public Vector3 npcPosition;
     public Vector3 npcEulerRotation;
+    public GameObject npcPose;
 }
 
 public class VistaManager : MonoBehaviour
@@ -23,6 +24,8 @@ public class VistaManager : MonoBehaviour
 
     public GameObject cameraHolder;
     public GameObject playerCamera;
+
+    private GameObject currentNPCPose;
 
     private void Awake()
     {
@@ -46,8 +49,21 @@ public class VistaManager : MonoBehaviour
 
     private IEnumerator SetupVista(VistaSettings targetVista, DialogueScript startingScript)
     {
+        if (this.currentNPCPose != null)
+        {
+            Destroy(this.currentNPCPose);
+            this.currentNPCPose = null;
+        }
+
         DragRotation.instance.currentlyActive = false;
-        
+
+        this.currentNPCPose = Instantiate(targetVista.npcPose, targetVista.npcPosition, Quaternion.Euler(targetVista.npcEulerRotation)) as GameObject;
+
+        GameObject ChildGameObject1 = this.currentNPCPose.transform.GetChild(0).gameObject;
+        FadeColor f = ChildGameObject1.AddComponent<FadeColor>();
+        while (!f._material) yield return null;
+        f.setNpcColor(FindObjectOfType<NPCStatusManager>().npcStatus);
+
         while (!HasCameraReachedVista(targetVista))
         {
             this.cameraHolder.transform.position = Vector3.Lerp(this.cameraHolder.transform.position, targetVista.cameraPosition, this.moveSpeed * Time.deltaTime);
