@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: second.0011.ma
-//Last modified: Mon, Nov 08, 2021 08:31:18 PM
+//Last modified: Mon, Nov 08, 2021 08:37:07 PM
 //Codeset: 1252
 requires maya "2022";
 requires "stereoCamera" "10.0";
@@ -13,13 +13,13 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19043)";
-fileInfo "UUID" "1BF87B67-4E79-0F98-5246-819F52717345";
+fileInfo "UUID" "46A1F9C7-4A25-B441-A66A-6C94EAA1D37E";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "9724F1CC-4C1D-1647-BB40-25A95683BB1E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -283.64651079265883 99.086459343489594 -16.431232051721324 ;
-	setAttr ".r" -type "double3" 1794.8616522889245 -33212.199999993063 0 ;
+	setAttr ".t" -type "double3" -893.21055189665105 485.16514317835083 -387.94745989319244 ;
+	setAttr ".r" -type "double3" 1777.461652355174 -33232.599999988903 0 ;
 	setAttr ".rp" -type "double3" -3.5527136788005009e-15 3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 5.7776133876363895e-15 -2.8578502145776502e-16 -3.1017007271055579e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -27,7 +27,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 313.20267886109502;
+	setAttr ".coi" 1080.4267563551416;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -65125,6 +65125,8 @@ createNode mesh -n "outerwallsShape" -p "outerwalls";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "dresser";
 	rename -uid "1A407DEF-4E32-0F3D-83B0-50883D0FD9E6";
+	setAttr ".t" -type "double3" -148.35177244984914 0 -308.63929141429605 ;
+	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
 createNode transform -n "pCube51" -p "dresser";
 	rename -uid "F18DDDC3-4E9A-95B3-48A1-94BAF19F2A07";
 	setAttr ".t" -type "double3" 0 56.484965887221179 0 ;
