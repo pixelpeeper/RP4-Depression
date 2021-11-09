@@ -25,11 +25,13 @@ public class NPCStatusManager : MonoBehaviour
     {
         this.currentNPCStatus -= decreaseAmount;
 
-        npcStatus--;
-        if (npcStatus < 0) npcStatus = 0;
+        if (decreaseAmount > 0)
+        {
+            npcStatus--;
+            if (npcStatus < 0) npcStatus = 0;
 
-        StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
-
+            StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
+        }
     }
 
     public void IncreaseNPCStatus(float increaseAmount)
@@ -41,10 +43,13 @@ public class NPCStatusManager : MonoBehaviour
             this.currentNPCStatus = 1.0f;
         }
 
-        npcStatus++;
-        if (npcStatus > 5) npcStatus = 6;
+        if (increaseAmount > 0)
+        {
+            npcStatus++;
+            if (npcStatus > 5) npcStatus = 5;
 
-        StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
+            StartCoroutine(FindObjectOfType<FadeColor>().NPCfading(npcStatus));
+        }
     }
 
     public bool CheckForFailure()

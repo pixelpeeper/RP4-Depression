@@ -47,7 +47,12 @@ public class ScenarioManager : MonoBehaviour
     private TextMeshProUGUI tapToRetryMessage;
 
     public int scenarioCount = 0;
-    
+
+    public delegate void OnScenarioEnded();
+    public OnScenarioEnded scenarioEnded;
+
+    public AudioSource optionalChoiceAudio;
+    public GameObject doorObject;
     void Awake()
     {
         instance = this;
@@ -131,6 +136,50 @@ public class ScenarioManager : MonoBehaviour
         {
             StartCoroutine(this.BeginEndgameSequence(false));
         }
+
+        if (this.scenarioEnded != null)
+        {
+            this.scenarioEnded();
+        }
+    }
+
+    public void SetupInitialGameState()
+    {
+        StartCoroutine(LoadInitialGameState());
+    }
+
+    private IEnumerator LoadInitialGameState()
+    {
+        this.endingCanvas.SetActive(true);
+
+        while (this.fadePanel.color.a < 0.99f)
+        {
+            float interpolationAlpha = Mathf.Lerp(this.fadePanel.color.a, 1.0f, this.fadeSpeed * Time.fixedDeltaTime);
+            this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, interpolationAlpha);
+            yield return new WaitForFixedUpdate();
+        }
+
+        this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, 1.0f);
+
+        VistaManager.instance.TriggerVista(4);
+
+        this.doorObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        //Wait for everything to be put into place
+        yield return new WaitForSeconds(2);
+
+        while (this.fadePanel.color.a > 0.01f)
+        {
+            float interpolationAlpha = Mathf.Lerp(this.fadePanel.color.a, 0.0f, this.fadeSpeed * Time.fixedDeltaTime);
+            this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, interpolationAlpha);
+            yield return new WaitForFixedUpdate();
+        }
+
+        this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, 0.0f);
+
+        this.endingCanvas.SetActive(false);
+        DragRotation.instance.currentlyActive = true;
+        scenarioCount = 0;
     }
 
     private IEnumerator BeginEndgameSequence(bool playerSucceeded)
