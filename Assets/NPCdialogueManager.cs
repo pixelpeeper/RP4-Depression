@@ -36,6 +36,13 @@ public class NPCdialogueManager : MonoBehaviour
     [SerializeField]
     private Sprite playerBubble;
 
+    [SerializeField]
+    private AudioSource bubbleSound;
+    [SerializeField]
+    private AudioClip npcSound;
+    [SerializeField]
+    private AudioClip playerSound;
+
     private void Awake()
     {
         instance = this;
@@ -74,15 +81,18 @@ public class NPCdialogueManager : MonoBehaviour
         {
             case DialogueSpeaker.NPC:
                 dialogueBlockList[count].GetComponent<Image>().sprite = this.npcBubble;
+                this.bubbleSound.clip = this.npcSound;
                 break;
             case DialogueSpeaker.Player:
-                Debug.LogError("Switch the sprite!");
                 dialogueBlockList[count].GetComponent<Image>().sprite = this.playerBubble;
+                this.bubbleSound.clip = this.playerSound;
                 break;
             default:
                 Debug.LogError("Unknown dialogue speaker");
                 break;
         }
+
+        this.bubbleSound.Play();
 
         count++;
         npc.SetActive(true);

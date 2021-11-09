@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceName: Ask more questions
   npcImpact: 0
-  npcStatusImpactValue: 0
+  npcStatusImpactValue: 0.1
   correspondingScript: {fileID: 11400000, guid: 1b08abbf5190b7b43b6c13da8eb02c4d, type: 2}
+  optionalSoundEffect: {fileID: 0}

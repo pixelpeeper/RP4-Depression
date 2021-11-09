@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choiceName: Ask if they have thought about seeing a therapist
   npcImpact: 0
-  npcStatusImpactValue: 0
+  npcStatusImpactValue: 0.2
   correspondingScript: {fileID: 11400000, guid: 1995f49de5c62ce4c9ed1ab7c7f243aa, type: 2}
+  optionalSoundEffect: {fileID: 0}
