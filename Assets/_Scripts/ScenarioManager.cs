@@ -117,6 +117,13 @@ public class ScenarioManager : MonoBehaviour
 
     private void PromptChoice()
     {
+        if (this.failed == false && NPCStatusManager.instance.CheckForFailure())
+        {
+            this.failed = true;
+            this.StartNewDialogueScript(this.failureScript);
+            return;
+        }
+
         this.nextDialogueButton.SetActive(false);
 
         this.choiceButton1.GetComponent<ChoiceButton>().buttonChoice = this.currentScript.scriptChoices[0];

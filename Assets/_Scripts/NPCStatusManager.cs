@@ -7,7 +7,7 @@ public class NPCStatusManager : MonoBehaviour
     public static NPCStatusManager instance;
 
     public float currentNPCStatus = 0.5f;
-    private float failureThreshold = 0.25f;
+    private float failureThreshold = 0.2f;
 
     public int npcStatus = 0;
     FadeColor npcFadeColor;
