@@ -11,4 +11,5 @@ public class DialogueChoice : ScriptableObject
     public NPCImpact npcImpact;
     public float npcStatusImpactValue;
     public DialogueScript correspondingScript;
+    public AudioClip optionalSoundEffect;
 }

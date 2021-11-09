@@ -32,7 +32,7 @@ public class VistaManager : MonoBehaviour
         instance = this;
     }
 
-    public void TriggerVista(int vistaIndex, DialogueScript startingScript)
+    public void TriggerVista(int vistaIndex, DialogueScript startingScript = null)
     {
         StartCoroutine(this.SetupVista(this.gameVistas[vistaIndex], startingScript));
     }
@@ -47,7 +47,7 @@ public class VistaManager : MonoBehaviour
         return (translationDistance <= 0.01f && xRotationDistance <= 0.01f && yRotationDistance <= 0.01f && zRotationDistance <= 0.01f);
     }
 
-    private IEnumerator SetupVista(VistaSettings targetVista, DialogueScript startingScript)
+    private IEnumerator SetupVista(VistaSettings targetVista, DialogueScript startingScript = null)
     {
         if (this.currentNPCPose != null)
         {
@@ -74,8 +74,10 @@ public class VistaManager : MonoBehaviour
         this.cameraHolder.transform.position = targetVista.cameraPosition;
         this.playerCamera.transform.rotation = Quaternion.Euler(targetVista.cameraEulerRotation);
 
-        ScenarioManager.instance.StartNewDialogueScript(startingScript);
-
+        if (startingScript != null)
+        {
+            ScenarioManager.instance.StartNewDialogueScript(startingScript);
+        }
     }
 }
 

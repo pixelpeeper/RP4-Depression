@@ -16,3 +16,4 @@ MonoBehaviour:
   npcImpact: 0
   npcStatusImpactValue: 0
   correspondingScript: {fileID: 11400000, guid: 7be087ebe7df4b44894a6ac900f03416, type: 2}
+  optionalSoundEffect: {fileID: 8300000, guid: ed19da54c79a44c4f8dc6f930a380273, type: 3}

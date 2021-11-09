@@ -9,12 +9,32 @@ public class VistaTrigger : ClickableObject
     [SerializeField]
     private DialogueScript startingScript;
 
+    [SerializeField]
+    private ObjectHighligher objectHighlighter;
+
+    [SerializeField]
+    private BoxCollider vistaCollider;
+
+    private void Update()
+    {
+        if (ScenarioManager.instance.scenarioCount == vistaIndex && this.objectHighlighter.selected == false)
+        {
+            this.objectHighlighter.DisplayHighlight();
+        }
+        else
+        {
+            this.objectHighlighter.HideHighlight();
+        }
+    }
+
+
     public override void Interact()
     {
-        if(FindObjectOfType<ScenarioManager>().scenarioCount == vistaIndex)
+        if(ScenarioManager.instance.scenarioCount == vistaIndex)
         {
             VistaManager.instance.TriggerVista(this.vistaIndex, startingScript);
-            Destroy(this);
+            this.vistaCollider.enabled = false;
+            this.objectHighlighter.selected = true;
         }
         
     }

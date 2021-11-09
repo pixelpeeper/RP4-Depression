@@ -28,10 +28,8 @@ public class ScenarioManager : MonoBehaviour
     private float fadeSpeed = 2.5f;
     private float textFadeSpeed = 5f;
 
-    [SerializeField]
-    private string goodMessage = "Hey, you did a good job!  Here's a cookie for your efforts.  Yaaaaay!";
-    [SerializeField]
-    private string badMessage = "Wow, you really bungled that one.  I suggest you try that again...";
+    private string goodMessage = "You were able to properly support your friend during a difficult time. Can you think of ways you could have done better?";
+    private string badMessage = "Your friend kicked you out of their apartment. Use what you've learned and try again.";
 
     [SerializeField]
     private GameObject endingCanvas;
@@ -46,8 +44,18 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI tapToRetryMessage;
 
-    public int scenarioCount = 0;
-    
+    public int scenarioCount = 3;
+
+    public delegate void OnScenarioEnded();
+    public OnScenarioEnded scenarioEnded;
+
+    public AudioSource optionalChoiceAudio;
+    public GameObject doorObject;
+
+    private bool failed = false;
+    private bool succeeded = false;
+    public DialogueScript failureScript;
+
     void Awake()
     {
         instance = this;
@@ -55,6 +63,13 @@ public class ScenarioManager : MonoBehaviour
 
     public void StartNewDialogueScript(DialogueScript newScript)
     {
+        Debug.LogError("Script Name: " + newScript.name);
+
+        if (newScript.name == "KitchenScript1")
+        {
+            this.succeeded = true;
+        }
+
         NPCdialogueManager.instance.ResetDialogue();
 
         this.currentScript = newScript;
@@ -78,7 +93,6 @@ public class ScenarioManager : MonoBehaviour
             else
             {
                 this.EndScenario();
-                scenarioCount++;
             }
             return;
         }
@@ -117,6 +131,16 @@ public class ScenarioManager : MonoBehaviour
 
     private void EndScenario()
     {
+        if (this.failed == true)
+        {
+            StartCoroutine(this.BeginEndgameSequence(false));
+        }
+
+        if (this.succeeded == true)
+        {
+            StartCoroutine(this.BeginEndgameSequence(true));
+        }
+
         this.currentScript = null;
         this.nextDialogueButton.SetActive(false);
         NPCdialogueManager.instance.ResetDialogue();
@@ -127,10 +151,57 @@ public class ScenarioManager : MonoBehaviour
 
         DragRotation.instance.currentlyActive = true;
 
-        if (NPCStatusManager.instance.CheckForFailure())
+        if (this.failed == false && NPCStatusManager.instance.CheckForFailure())
         {
-            StartCoroutine(this.BeginEndgameSequence(false));
+            this.failed = true;
+            this.StartNewDialogueScript(this.failureScript);
         }
+
+        this.scenarioCount++;
+
+        if (this.scenarioEnded != null)
+        {
+            this.scenarioEnded();
+        }
+    }
+
+    public void SetupInitialGameState()
+    {
+        StartCoroutine(LoadInitialGameState());
+    }
+
+    private IEnumerator LoadInitialGameState()
+    {
+        this.endingCanvas.SetActive(true);
+
+        while (this.fadePanel.color.a < 0.99f)
+        {
+            float interpolationAlpha = Mathf.Lerp(this.fadePanel.color.a, 1.0f, this.fadeSpeed * Time.fixedDeltaTime);
+            this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, interpolationAlpha);
+            yield return new WaitForFixedUpdate();
+        }
+
+        this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, 1.0f);
+
+        scenarioCount = 0;
+        VistaManager.instance.TriggerVista(4);
+
+        this.doorObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        //Wait for everything to be put into place
+        yield return new WaitForSeconds(2);
+
+        while (this.fadePanel.color.a > 0.01f)
+        {
+            float interpolationAlpha = Mathf.Lerp(this.fadePanel.color.a, 0.0f, this.fadeSpeed * Time.fixedDeltaTime);
+            this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, interpolationAlpha);
+            yield return new WaitForFixedUpdate();
+        }
+
+        this.fadePanel.color = new Color(this.fadePanel.color.r, this.fadePanel.color.g, this.fadePanel.color.b, 0.0f);
+
+        this.endingCanvas.SetActive(false);
+        DragRotation.instance.currentlyActive = true;
     }
 
     private IEnumerator BeginEndgameSequence(bool playerSucceeded)
