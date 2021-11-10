@@ -4,6 +4,8 @@ Not Alone is a prototype game developed in a few short weeks.
 
 The goal of the game is to teach the player how to navigate the sometimes difficult situation of supporting a loved one who is suffering from depression.  Experts were consulted to ensure that the information and strategies found in this game are accurate and useful as an education tool.
 
+Published at: https://jared-slawski.itch.io/not-alone
+
 Team 9:
 * Anna Chen - Engineer
 * Avery Byers - Tech Artist
